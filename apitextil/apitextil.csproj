@@ -10,25 +10,24 @@
 		<PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
 		<PackageReference Include="mercadopago-sdk" Version="2.8.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.3" />
-		 <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.13" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.13" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.3">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="MySql.Data" Version="9.3.0" />
+
+		<!-- OJO: si usas Pomelo, normalmente NO necesitas MySql.Data -->
 		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.3" />
+
 		<PackageReference Include="PusherServer" Version="5.0.0" />
 		<PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
 		<PackageReference Include="Resend" Version="0.2.1" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
-<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.1.2" />	</ItemGroup>
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.1.2" />
+	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Controllers\" />
-	  <Folder Include="DTOs\" />
-	  <Folder Include="Models\" />
-	  <Folder Include="Services\" />
-	  <Folder Include="Properties\wwwroot\" />
+	  <Folder Include="DTOs\NewFolder\" />
 	</ItemGroup>
-	
+
 </Project>

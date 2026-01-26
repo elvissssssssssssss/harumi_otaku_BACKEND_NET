@@ -1,207 +1,14 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "API Textil",
+    "title": "API Harumi",
     "version": "v1"
   },
   "paths": {
-    "/api/AdminAuth/login": {
-      "post": {
-        "tags": [
-          "AdminAuth"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AuthAdminDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AuthAdminDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AuthAdminDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/AdminResponseDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AdminResponseDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AdminResponseDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Admins": {
-      "get": {
-        "tags": [
-          "Admins"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/LoginAdmin"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/LoginAdmin"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/LoginAdmin"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Admins"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateAdminDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateAdminDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateAdminDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/LoginAdmin"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LoginAdmin"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LoginAdmin"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Admins/{id}": {
-      "get": {
-        "tags": [
-          "Admins"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/LoginAdmin"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LoginAdmin"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LoginAdmin"
-                }
-              }
-            }
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Admins"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Admins/{id}/toggle": {
+    "/api/admin/ordenes/{id}/estado": {
       "patch": {
         "tags": [
-          "Admins"
+          "AdminOrdenes"
         ],
         "parameters": [
           {
@@ -210,7 +17,180 @@
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
+            }
+          },
+          {
+            "name": "adminUsuarioId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminCambiarEstadoOrdenDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminCambiarEstadoOrdenDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminCambiarEstadoOrdenDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/admin/pagos/{pagoId}/validar": {
+      "post": {
+        "tags": [
+          "AdminPagos"
+        ],
+        "parameters": [
+          {
+            "name": "pagoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "adminUsuarioId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidarPagoDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidarPagoDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidarPagoDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/auth/register": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthRegisterDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthRegisterDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthRegisterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthLoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthLoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthLoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/auth/me": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/carrito/actual": {
+      "get": {
+        "tags": [
+          "Carrito"
+        ],
+        "parameters": [
+          {
+            "name": "usuarioId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
             }
           }
         ],
@@ -221,149 +201,219 @@
         }
       }
     },
-    "/api/Auth/login": {
+    "/api/carrito/items": {
       "post": {
         "tags": [
-          "Auth"
+          "Carrito"
+        ],
+        "parameters": [
+          {
+            "name": "usuarioId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginDto"
+                "$ref": "#/components/schemas/AddCarritoItemDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginDto"
+                "$ref": "#/components/schemas/AddCarritoItemDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginDto"
+                "$ref": "#/components/schemas/AddCarritoItemDto"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/AuthResponseDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AuthResponseDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AuthResponseDto"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
     },
-    "/api/Auth/register": {
-      "post": {
+    "/api/carrito/items/{itemId}": {
+      "patch": {
         "tags": [
-          "Auth"
+          "Carrito"
+        ],
+        "parameters": [
+          {
+            "name": "usuarioId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "itemId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RegisterDto"
+                "$ref": "#/components/schemas/UpdateCarritoItemDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/RegisterDto"
+                "$ref": "#/components/schemas/UpdateCarritoItemDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/RegisterDto"
+                "$ref": "#/components/schemas/UpdateCarritoItemDto"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/AuthResponseDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AuthResponseDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AuthResponseDto"
-                }
-              }
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Carrito"
+        ],
+        "parameters": [
+          {
+            "name": "usuarioId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
             }
+          },
+          {
+            "name": "itemId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
     },
-    "/api/Auth/profile": {
+    "/api/categorias": {
       "get": {
         "tags": [
-          "Auth"
+          "Categorias"
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserDto"
-                }
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Categorias"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCategoriaDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCategoriaDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCategoriaDto"
               }
             }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/categorias/{id}": {
+      "get": {
+        "tags": [
+          "Categorias"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       },
       "put": {
         "tags": [
-          "Auth"
+          "Categorias"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateUserDto"
+                "$ref": "#/components/schemas/UpdateCategoriaDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateUserDto"
+                "$ref": "#/components/schemas/UpdateCategoriaDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateUserDto"
+                "$ref": "#/components/schemas/UpdateCategoriaDto"
               }
             }
           }
@@ -376,88 +426,7 @@
       },
       "delete": {
         "tags": [
-          "Auth"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Auth/change-password": {
-      "post": {
-        "tags": [
-          "Auth"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ChangePasswordDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ChangePasswordDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ChangePasswordDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Auth/users": {
-      "get": {
-        "tags": [
-          "Auth"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/UserDto"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/UserDto"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/UserDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Auth/user/{id}": {
-      "get": {
-        "tags": [
-          "Auth"
+          "Categorias"
         ],
         "parameters": [
           {
@@ -466,135 +435,29 @@
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserDto"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
     },
-    "/api/Cart/{userId}": {
-      "get": {
-        "tags": [
-          "Cart"
-        ],
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/CartSummaryDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CartSummaryDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CartSummaryDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Cart": {
+    "/api/ordenes": {
       "post": {
         "tags": [
-          "Cart"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AddToCartDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AddToCartDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AddToCartDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/CartItemDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CartItemDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CartItemDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Cart/{cartItemId}": {
-      "put": {
-        "tags": [
-          "Cart"
+          "Ordenes"
         ],
         "parameters": [
           {
-            "name": "cartItemId",
-            "in": "path",
-            "required": true,
+            "name": "usuarioId",
+            "in": "query",
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
             }
           }
         ],
@@ -602,67 +465,69 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateCartItemDto"
+                "$ref": "#/components/schemas/CreateOrdenDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateCartItemDto"
+                "$ref": "#/components/schemas/CreateOrdenDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateCartItemDto"
+                "$ref": "#/components/schemas/CreateOrdenDto"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/CartItemDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CartItemDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CartItemDto"
-                }
-              }
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Ordenes"
+        ],
+        "parameters": [
+          {
+            "name": "usuarioId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
             }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
     },
-    "/api/Cart/{cartItemId}/user/{userId}": {
-      "delete": {
+    "/api/ordenes/{id}": {
+      "get": {
         "tags": [
-          "Cart"
+          "Ordenes"
         ],
         "parameters": [
           {
-            "name": "cartItemId",
+            "name": "id",
             "in": "path",
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
             }
           },
           {
-            "name": "userId",
-            "in": "path",
-            "required": true,
+            "name": "usuarioId",
+            "in": "query",
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
             }
           }
         ],
@@ -673,119 +538,10 @@
         }
       }
     },
-    "/api/Cart/clear/{userId}": {
-      "delete": {
-        "tags": [
-          "Cart"
-        ],
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Cart/count/{userId}": {
+    "/api/ordenes/{id}/historial-estados": {
       "get": {
         "tags": [
-          "Cart"
-        ],
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Chat/contacto": {
-      "post": {
-        "tags": [
-          "Chat"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AtencionClienteDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AtencionClienteDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AtencionClienteDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Chat/mensajes": {
-      "get": {
-        "tags": [
-          "Chat"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Chat/mensajes/{id}": {
-      "get": {
-        "tags": [
-          "Chat"
+          "Ordenes"
         ],
         "parameters": [
           {
@@ -794,114 +550,15 @@
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Chat/mensajes/estado/{estado}": {
-      "get": {
-        "tags": [
-          "Chat"
-        ],
-        "parameters": [
-          {
-            "name": "estado",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Chat/guardar-mensaje": {
-      "post": {
-        "tags": [
-          "Chat"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/MensajeChatDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/MensajeChatDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/MensajeChatDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Chat/historial/{atencionId}": {
-      "get": {
-        "tags": [
-          "Chat"
-        ],
-        "parameters": [
-          {
-            "name": "atencionId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Chat/marcar-leidos/{atencionId}/{emisorTipo}": {
-      "put": {
-        "tags": [
-          "Chat"
-        ],
-        "parameters": [
-          {
-            "name": "atencionId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
+              "format": "int64"
             }
           },
           {
-            "name": "emisorTipo",
-            "in": "path",
-            "required": true,
+            "name": "usuarioId",
+            "in": "query",
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int64"
             }
           }
         ],
@@ -912,19 +569,27 @@
         }
       }
     },
-    "/api/Chat/mensajes/{id}/estado": {
-      "put": {
+    "/api/ordenes/{ordenId}/pago/yape/iniciar": {
+      "post": {
         "tags": [
-          "Chat"
+          "OrdenPagos"
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "ordenId",
             "in": "path",
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
+            }
+          },
+          {
+            "name": "usuarioId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
             }
           }
         ],
@@ -932,17 +597,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ActualizarEstadoDto"
+                "$ref": "#/components/schemas/IniciarPagoYapeDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ActualizarEstadoDto"
+                "$ref": "#/components/schemas/IniciarPagoYapeDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ActualizarEstadoDto"
+                "$ref": "#/components/schemas/IniciarPagoYapeDto"
               }
             }
           }
@@ -954,258 +619,29 @@
         }
       }
     },
-    "/api/Chat/enviar-y-guardar": {
+    "/api/pagos/{pagoId}/voucher": {
       "post": {
         "tags": [
-          "Chat"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EnviarYGuardarDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EnviarYGuardarDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/EnviarYGuardarDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Chat/historial/usuario/{userId}": {
-      "get": {
-        "tags": [
-          "Chat"
+          "Pagos"
         ],
         "parameters": [
           {
-            "name": "userId",
+            "name": "pagoId",
             "in": "path",
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
             }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Chat/enviar": {
-      "post": {
-        "tags": [
-          "Chat"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ChatMessageDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ChatMessageDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ChatMessageDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Comprobantes/emitir": {
-      "post": {
-        "tags": [
-          "Comprobantes"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EmitirComprobanteDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EmitirComprobanteDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/EmitirComprobanteDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Comprobantes/test-config": {
-      "get": {
-        "tags": [
-          "Comprobantes"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Envios/estados": {
-      "get": {
-        "tags": [
-          "Envios"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Envios/seguimiento/{ventaId}": {
-      "get": {
-        "tags": [
-          "Envios"
-        ],
-        "parameters": [
+          },
           {
-            "name": "ventaId",
-            "in": "path",
-            "required": true,
+            "name": "usuarioId",
+            "in": "query",
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
             }
           }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Envios/seguimiento": {
-      "post": {
-        "tags": [
-          "Envios"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateSeguimientoEnvioDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateSeguimientoEnvioDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateSeguimientoEnvioDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Envios/documentos/{ventaId}": {
-      "get": {
-        "tags": [
-          "Envios"
-        ],
-        "parameters": [
-          {
-            "name": "ventaId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Envios/documentos": {
-      "post": {
-        "tags": [
-          "Envios"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateDocumentoEnvioDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateDocumentoEnvioDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateDocumentoEnvioDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Envios/upload-documento": {
-      "post": {
-        "tags": [
-          "Envios"
         ],
         "requestBody": {
           "content": {
@@ -1213,256 +649,20 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "venta_id": {
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "tipo_documento": {
-                    "type": "string"
-                  },
-                  "archivo": {
-                    "type": "string",
-                    "format": "binary"
-                  }
-                }
-              },
-              "encoding": {
-                "venta_id": {
-                  "style": "form"
-                },
-                "tipo_documento": {
-                  "style": "form"
-                },
-                "archivo": {
-                  "style": "form"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Envios/confirmar-entrega/{ventaId}": {
-      "post": {
-        "tags": [
-          "Envios"
-        ],
-        "parameters": [
-          {
-            "name": "ventaId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Envios/mis-seguimientos": {
-      "get": {
-        "tags": [
-          "Envios"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Envios/pusher/auth": {
-      "post": {
-        "tags": [
-          "Envios"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PusherAuthRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PusherAuthRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/PusherAuthRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Niubiz/token": {
-      "get": {
-        "tags": [
-          "Niubiz"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Niubiz/pago": {
-      "post": {
-        "tags": [
-          "Niubiz"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NiubizVentaRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NiubizVentaRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/NiubizVentaRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Ventas/pago/voucher-completo": {
-      "post": {
-        "tags": [
-          "PagoVoucher"
-        ],
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "required": [
-                  "ClienteApellidos",
-                  "ClienteNombres",
-                  "Detalles",
-                  "TipoComprobante",
-                  "Total",
-                  "UserId",
-                  "Voucher"
-                ],
-                "type": "object",
-                "properties": {
-                  "Voucher": {
+                  "Imagen": {
                     "type": "string",
                     "format": "binary"
                   },
-                  "UserId": {
-                    "maximum": 2147483647,
-                    "minimum": 1,
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "Total": {
-                    "minimum": 0.01,
-                    "type": "number",
-                    "format": "double"
-                  },
-                  "NumeroOperacion": {
-                    "maxLength": 100,
-                    "minLength": 0,
-                    "type": "string"
-                  },
-                  "ClienteNombres": {
-                    "maxLength": 50,
-                    "minLength": 0,
-                    "type": "string"
-                  },
-                  "ClienteApellidos": {
-                    "maxLength": 50,
-                    "minLength": 0,
-                    "type": "string"
-                  },
-                  "ClienteDNI": {
-                    "maxLength": 20,
-                    "minLength": 0,
-                    "type": "string"
-                  },
-                  "TipoComprobante": {
-                    "maxLength": 20,
-                    "minLength": 0,
-                    "type": "string"
-                  },
-                  "Ruc": {
-                    "maxLength": 11,
-                    "minLength": 0,
-                    "type": "string"
-                  },
-                  "RazonSocial": {
-                    "maxLength": 100,
-                    "minLength": 0,
-                    "type": "string"
-                  },
-                  "Detalles": {
+                  "NroOperacion": {
                     "type": "string"
                   }
                 }
               },
               "encoding": {
-                "Voucher": {
+                "Imagen": {
                   "style": "form"
                 },
-                "UserId": {
-                  "style": "form"
-                },
-                "Total": {
-                  "style": "form"
-                },
-                "NumeroOperacion": {
-                  "style": "form"
-                },
-                "ClienteNombres": {
-                  "style": "form"
-                },
-                "ClienteApellidos": {
-                  "style": "form"
-                },
-                "ClienteDNI": {
-                  "style": "form"
-                },
-                "TipoComprobante": {
-                  "style": "form"
-                },
-                "Ruc": {
-                  "style": "form"
-                },
-                "RazonSocial": {
-                  "style": "form"
-                },
-                "Detalles": {
+                "NroOperacion": {
                   "style": "form"
                 }
               }
@@ -1476,123 +676,32 @@
         }
       }
     },
-    "/api/Ventas/pago/ping": {
-      "get": {
-        "tags": [
-          "PagoVoucher"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Ventas/pago/ventas/{ventaId}/voucher/verificar": {
-      "post": {
-        "tags": [
-          "PagoVoucher"
-        ],
-        "parameters": [
-          {
-            "name": "ventaId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Ventas/pago/ventas/{ventaId}/voucher/rechazar": {
-      "post": {
-        "tags": [
-          "PagoVoucher"
-        ],
-        "parameters": [
-          {
-            "name": "ventaId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RechazoVoucherDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RechazoVoucherDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/RechazoVoucherDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Ventas/pago/config": {
-      "get": {
-        "tags": [
-          "PagoVoucher"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Productos": {
+    "/api/productos": {
       "get": {
         "tags": [
           "Productos"
         ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProductoDtoIEnumerableApiResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProductoDtoIEnumerableApiResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProductoDtoIEnumerableApiResponse"
-                }
-              }
+        "parameters": [
+          {
+            "name": "categoriaId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
             }
           },
-          "500": {
-            "description": "Internal Server Error"
+          {
+            "name": "activo",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       },
@@ -1604,119 +713,48 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "required": [
-                  "Code",
-                  "Color",
-                  "Marca",
-                  "Nombre",
-                  "Precio",
-                  "Talla"
-                ],
                 "type": "object",
                 "properties": {
+                  "CategoriaId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
                   "Nombre": {
-                    "maxLength": 255,
-                    "minLength": 0,
                     "type": "string"
                   },
-                  "Description": {
-                    "maxLength": 1000,
-                    "minLength": 0,
-                    "type": "string"
-                  },
-                  "Marca": {
-                    "maxLength": 255,
-                    "minLength": 0,
-                    "type": "string"
-                  },
-                  "Color": {
-                    "maxLength": 255,
-                    "minLength": 0,
+                  "Descripcion": {
                     "type": "string"
                   },
                   "Precio": {
-                    "minimum": 0.01,
                     "type": "number",
                     "format": "double"
                   },
-                  "PrecioDescuento": {
-                    "minimum": 0,
-                    "type": "number",
-                    "format": "double"
+                  "Activo": {
+                    "type": "boolean"
                   },
-                  "Stock": {
-                    "maximum": 2147483647,
-                    "minimum": 0,
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "Talla": {
-                    "maxLength": 10,
-                    "minLength": 0,
-                    "type": "string"
-                  },
-                  "Code": {
-                    "maxLength": 255,
-                    "minLength": 0,
-                    "type": "string"
-                  },
-                  "imagen": {
+                  "Foto": {
                     "type": "string",
                     "format": "binary"
-                  },
-                  "imagen2": {
-                    "type": "string",
-                    "format": "binary"
-                  },
-                  "imagen3": {
-                    "type": "string",
-                    "format": "binary"
-                  },
-                  "Categoria": {
-                    "maxLength": 255,
-                    "minLength": 0,
-                    "type": "string"
                   }
                 }
               },
               "encoding": {
+                "CategoriaId": {
+                  "style": "form"
+                },
                 "Nombre": {
                   "style": "form"
                 },
-                "Description": {
-                  "style": "form"
-                },
-                "Marca": {
-                  "style": "form"
-                },
-                "Color": {
+                "Descripcion": {
                   "style": "form"
                 },
                 "Precio": {
                   "style": "form"
                 },
-                "PrecioDescuento": {
+                "Activo": {
                   "style": "form"
                 },
-                "Stock": {
-                  "style": "form"
-                },
-                "Talla": {
-                  "style": "form"
-                },
-                "Code": {
-                  "style": "form"
-                },
-                "imagen": {
-                  "style": "form"
-                },
-                "imagen2": {
-                  "style": "form"
-                },
-                "imagen3": {
-                  "style": "form"
-                },
-                "Categoria": {
+                "Foto": {
                   "style": "form"
                 }
               }
@@ -1724,72 +762,13 @@
           }
         },
         "responses": {
-          "201": {
-            "description": "Created",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProductoDtoApiResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProductoDtoApiResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProductoDtoApiResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Productos/categoria/{categoria}": {
-      "get": {
-        "tags": [
-          "Productos"
-        ],
-        "parameters": [
-          {
-            "name": "categoria",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProductoDtoIEnumerableApiResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProductoDtoIEnumerableApiResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProductoDtoIEnumerableApiResponse"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
+            "description": "OK"
           }
         }
       }
     },
-    "/api/Productos/{id}": {
+    "/api/productos/{id}": {
       "get": {
         "tags": [
           "Productos"
@@ -1801,68 +780,7 @@
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProductoDtoApiResponse"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProductoDtoApiResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProductoDtoApiResponse"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Productos"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
+              "format": "int64"
             }
           }
         ],
@@ -1883,7 +801,7 @@
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
             }
           }
         ],
@@ -1893,109 +811,46 @@
               "schema": {
                 "type": "object",
                 "properties": {
+                  "CategoriaId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
                   "Nombre": {
-                    "maxLength": 255,
-                    "minLength": 0,
                     "type": "string"
                   },
-                  "Description": {
-                    "maxLength": 1000,
-                    "minLength": 0,
-                    "type": "string"
-                  },
-                  "Marca": {
-                    "maxLength": 255,
-                    "minLength": 0,
-                    "type": "string"
-                  },
-                  "Color": {
-                    "maxLength": 255,
-                    "minLength": 0,
+                  "Descripcion": {
                     "type": "string"
                   },
                   "Precio": {
-                    "minimum": 0.01,
                     "type": "number",
                     "format": "double"
                   },
-                  "PrecioDescuento": {
-                    "minimum": 0,
-                    "type": "number",
-                    "format": "double"
+                  "Activo": {
+                    "type": "boolean"
                   },
-                  "Stock": {
-                    "maximum": 2147483647,
-                    "minimum": 0,
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "Talla": {
-                    "maxLength": 10,
-                    "minLength": 0,
-                    "type": "string"
-                  },
-                  "Code": {
-                    "maxLength": 255,
-                    "minLength": 0,
-                    "type": "string"
-                  },
-                  "imagen": {
+                  "Foto": {
                     "type": "string",
                     "format": "binary"
-                  },
-                  "imagen2": {
-                    "type": "string",
-                    "format": "binary"
-                  },
-                  "imagen3": {
-                    "type": "string",
-                    "format": "binary"
-                  },
-                  "Categoria": {
-                    "maxLength": 255,
-                    "minLength": 0,
-                    "type": "string"
                   }
                 }
               },
               "encoding": {
+                "CategoriaId": {
+                  "style": "form"
+                },
                 "Nombre": {
                   "style": "form"
                 },
-                "Description": {
-                  "style": "form"
-                },
-                "Marca": {
-                  "style": "form"
-                },
-                "Color": {
+                "Descripcion": {
                   "style": "form"
                 },
                 "Precio": {
                   "style": "form"
                 },
-                "PrecioDescuento": {
+                "Activo": {
                   "style": "form"
                 },
-                "Stock": {
-                  "style": "form"
-                },
-                "Talla": {
-                  "style": "form"
-                },
-                "Code": {
-                  "style": "form"
-                },
-                "imagen": {
-                  "style": "form"
-                },
-                "imagen2": {
-                  "style": "form"
-                },
-                "imagen3": {
-                  "style": "form"
-                },
-                "Categoria": {
+                "Foto": {
                   "style": "form"
                 }
               }
@@ -2009,7 +864,7 @@
         }
       }
     },
-    "/api/Productos/{id}/activo": {
+    "/api/productos/{id}/activo": {
       "patch": {
         "tags": [
           "Productos"
@@ -2021,7 +876,7 @@
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int64"
             }
           }
         ],
@@ -2029,784 +884,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/SetActivoDto"
+                "$ref": "#/components/schemas/SetProductoActivoDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/SetActivoDto"
+                "$ref": "#/components/schemas/SetProductoActivoDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/SetActivoDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Roles": {
-      "get": {
-        "tags": [
-          "Roles"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Rol"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Rol"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Rol"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Roles"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateRolDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateRolDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateRolDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Rol"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Rol"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Rol"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Roles/{id}": {
-      "get": {
-        "tags": [
-          "Roles"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Rol"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Rol"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Rol"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Roles"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateRolDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateRolDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateRolDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Roles"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/TblEnvios": {
-      "post": {
-        "tags": [
-          "TblEnvios"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/TblEnviosCreateDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/TblEnviosCreateDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/TblEnviosCreateDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/TblEnviosResponseDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TblEnviosResponseDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TblEnviosResponseDto"
-                }
-              }
-            }
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "TblEnvios"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TblEnviosResponseDto"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TblEnviosResponseDto"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TblEnviosResponseDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/TblEnvios/{id}": {
-      "get": {
-        "tags": [
-          "TblEnvios"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/TblEnviosResponseDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TblEnviosResponseDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TblEnviosResponseDto"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "TblEnvios"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/TblEnviosUpdateDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/TblEnviosUpdateDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/TblEnviosUpdateDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/TblEnviosResponseDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TblEnviosResponseDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TblEnviosResponseDto"
-                }
-              }
-            }
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "TblEnvios"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/TblEnvios/user/{userId}": {
-      "get": {
-        "tags": [
-          "TblEnvios"
-        ],
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/TblEnviosResponseDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TblEnviosResponseDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TblEnviosResponseDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/TblEnvios/region/{region}": {
-      "get": {
-        "tags": [
-          "TblEnvios"
-        ],
-        "parameters": [
-          {
-            "name": "region",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TblEnviosResponseDto"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TblEnviosResponseDto"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TblEnviosResponseDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/TblEnvios/provincia/{provincia}": {
-      "get": {
-        "tags": [
-          "TblEnvios"
-        ],
-        "parameters": [
-          {
-            "name": "provincia",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TblEnviosResponseDto"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TblEnviosResponseDto"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/TblEnviosResponseDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/TblEnvios/exists/dni/{dni}": {
-      "get": {
-        "tags": [
-          "TblEnvios"
-        ],
-        "parameters": [
-          {
-            "name": "dni",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/TblEnvios/exists/user/{userId}": {
-      "get": {
-        "tags": [
-          "TblEnvios"
-        ],
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Ventas": {
-      "post": {
-        "tags": [
-          "Ventas"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateVentaDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateVentaDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateVentaDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Ventas"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Ventas/completa": {
-      "post": {
-        "tags": [
-          "Ventas"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateVentaConDetallesDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateVentaConDetallesDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateVentaConDetallesDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Ventas/test-email": {
-      "post": {
-        "tags": [
-          "Ventas"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/TestEmailDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/TestEmailDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/TestEmailDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Ventas/notificar-comprobante": {
-      "post": {
-        "tags": [
-          "Ventas"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NotificarComprobanteDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NotificarComprobanteDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/NotificarComprobanteDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Ventas/preferencia": {
-      "post": {
-        "tags": [
-          "Ventas"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreatePreferenceRequestDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreatePreferenceRequestDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreatePreferenceRequestDto"
+                "$ref": "#/components/schemas/SetProductoActivoDto"
               }
             }
           }
@@ -2821,953 +909,105 @@
   },
   "components": {
     "schemas": {
-      "ActualizarEstadoDto": {
-        "type": "object",
-        "properties": {
-          "estado": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "AddToCartDto": {
-        "required": [
-          "productId",
-          "quantity",
-          "talla",
-          "userId"
-        ],
-        "type": "object",
-        "properties": {
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "productId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "talla": {
-            "maxLength": 10,
-            "minLength": 0,
-            "type": "string"
-          },
-          "quantity": {
-            "maximum": 10,
-            "minimum": 1,
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "AdminResponseDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "nombre": {
-            "type": "string",
-            "nullable": true
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "rol": {
-            "type": "string",
-            "nullable": true
-          },
-          "token": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "AtencionClienteDto": {
-        "required": [
-          "correo",
-          "mensaje",
-          "nombre",
-          "telefono"
-        ],
-        "type": "object",
-        "properties": {
-          "userId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "nombre": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string"
-          },
-          "telefono": {
-            "maxLength": 20,
-            "minLength": 0,
-            "type": "string"
-          },
-          "correo": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string",
-            "format": "email"
-          },
-          "mensaje": {
-            "maxLength": 1000,
-            "minLength": 0,
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "AuthAdminDto": {
-        "type": "object",
-        "properties": {
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "AuthResponseDto": {
-        "type": "object",
-        "properties": {
-          "token": {
-            "type": "string",
-            "nullable": true
-          },
-          "user": {
-            "$ref": "#/components/schemas/UserDto"
-          },
-          "message": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CartItemDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "productId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "talla": {
-            "type": "string",
-            "nullable": true
-          },
-          "quantity": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "color": {
-            "type": "string",
-            "nullable": true
-          },
-          "precioDescuento": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "productName": {
-            "type": "string",
-            "nullable": true
-          },
-          "productImage": {
-            "type": "string",
-            "nullable": true
-          },
-          "productDescription": {
-            "type": "string",
-            "nullable": true
-          },
-          "productPrice": {
-            "type": "number",
-            "format": "double"
-          },
-          "productStock": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "totalPrice": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
-      "CartSummaryDto": {
-        "type": "object",
-        "properties": {
-          "totalItems": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "subTotal": {
-            "type": "number",
-            "format": "double"
-          },
-          "tax": {
-            "type": "number",
-            "format": "double"
-          },
-          "total": {
-            "type": "number",
-            "format": "double"
-          },
-          "items": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CartItemDto"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ChangePasswordDto": {
-        "required": [
-          "currentPassword",
-          "newPassword"
-        ],
-        "type": "object",
-        "properties": {
-          "currentPassword": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "newPassword": {
-            "minLength": 6,
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "ChatMessageDto": {
-        "type": "object",
-        "properties": {
-          "usuario": {
-            "type": "string",
-            "nullable": true
-          },
-          "texto": {
-            "type": "string",
-            "nullable": true
-          },
-          "tipo": {
-            "type": "string",
-            "nullable": true
-          },
-          "fecha": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateAdminDto": {
-        "type": "object",
-        "properties": {
-          "nombre": {
-            "type": "string",
-            "nullable": true
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "nullable": true
-          },
-          "rolId": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateDetalleVentaDto": {
+      "AddCarritoItemDto": {
         "type": "object",
         "properties": {
           "productoId": {
             "type": "integer",
-            "format": "int32"
-          },
-          "nombreProducto": {
-            "type": "string",
-            "nullable": true
+            "format": "int64"
           },
           "cantidad": {
             "type": "integer",
             "format": "int32"
-          },
-          "precioUnitario": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
       },
-      "CreateDocumentoEnvioDto": {
+      "AdminCambiarEstadoOrdenDto": {
         "type": "object",
         "properties": {
-          "venta_id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "tipo_documento": {
+          "estadoCodigo": {
             "type": "string",
             "nullable": true
           },
-          "nombre_archivo": {
-            "type": "string",
-            "nullable": true
-          },
-          "ruta_archivo": {
+          "comentario": {
             "type": "string",
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "CreatePreferenceRequestDto": {
-        "type": "object",
-        "properties": {
-          "items": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PreferenceItemDto"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateRolDto": {
-        "type": "object",
-        "properties": {
-          "nombre": {
-            "type": "string",
-            "nullable": true
-          },
-          "descripcion": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateSeguimientoEnvioDto": {
-        "type": "object",
-        "properties": {
-          "venta_id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "estado_id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "ubicacion_actual": {
-            "type": "string",
-            "nullable": true
-          },
-          "observaciones": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateVentaConDetallesDto": {
-        "type": "object",
-        "properties": {
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "metodoPagoId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "total": {
-            "type": "number",
-            "format": "double"
-          },
-          "detalles": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CreateDetalleVentaDto"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateVentaDto": {
-        "type": "object",
-        "properties": {
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "metodoPagoId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "total": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
-      "EmitirComprobanteDto": {
-        "type": "object",
-        "properties": {
-          "ventaId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "tipoComprobante": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "numeroForzado": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "clienteDNI": {
-            "type": "string",
-            "nullable": true
-          },
-          "clienteNombres": {
-            "type": "string",
-            "nullable": true
-          },
-          "clienteApellidos": {
-            "type": "string",
-            "nullable": true
-          },
-          "ruc": {
-            "type": "string",
-            "nullable": true
-          },
-          "razonSocial": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "EnviarYGuardarDto": {
-        "type": "object",
-        "properties": {
-          "atencionId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "usuario": {
-            "type": "string",
-            "nullable": true
-          },
-          "texto": {
-            "type": "string",
-            "nullable": true
-          },
-          "tipo": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "LoginAdmin": {
-        "required": [
-          "email",
-          "nombre",
-          "passwordHash",
-          "rol"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "nombre": {
-            "maxLength": 100,
-            "minLength": 1,
-            "type": "string"
-          },
-          "email": {
-            "maxLength": 150,
-            "minLength": 1,
-            "type": "string"
-          },
-          "passwordHash": {
-            "maxLength": 255,
-            "minLength": 1,
-            "type": "string"
-          },
-          "rol": {
-            "maxLength": 50,
-            "minLength": 1,
-            "type": "string"
-          },
-          "rolId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "ultimoAcceso": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "activo": {
-            "type": "boolean"
-          },
-          "creadoEn": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "actualizadoEn": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "rolNavigation": {
-            "$ref": "#/components/schemas/Rol"
-          }
-        },
-        "additionalProperties": false
-      },
-      "LoginDto": {
-        "required": [
-          "email",
-          "password"
-        ],
+      "AuthLoginDto": {
         "type": "object",
         "properties": {
           "email": {
-            "minLength": 1,
             "type": "string",
-            "format": "email"
+            "nullable": true
           },
           "password": {
-            "minLength": 1,
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "MensajeChatDto": {
-        "required": [
-          "atencionId",
-          "emisorNombre",
-          "emisorTipo",
-          "mensaje"
-        ],
-        "type": "object",
-        "properties": {
-          "atencionId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "emisorTipo": {
-            "maxLength": 20,
-            "minLength": 0,
-            "type": "string"
-          },
-          "emisorNombre": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string"
-          },
-          "mensaje": {
-            "maxLength": 1000,
-            "minLength": 0,
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "NiubizDataMap": {
-        "type": "object",
-        "properties": {
-          "urlAddress": {
-            "type": "string",
-            "nullable": true
-          },
-          "serviceLocationCityName": {
-            "type": "string",
-            "nullable": true
-          },
-          "serviceLocationCountrySubdivisionCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "serviceLocationCountryCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "serviceLocationPostalCode": {
             "type": "string",
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "NiubizOrder": {
-        "type": "object",
-        "properties": {
-          "tokenId": {
-            "type": "string",
-            "nullable": true
-          },
-          "purchaseNumber": {
-            "type": "string",
-            "nullable": true
-          },
-          "amount": {
-            "type": "number",
-            "format": "double"
-          },
-          "currency": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "NiubizVentaRequest": {
-        "type": "object",
-        "properties": {
-          "channel": {
-            "type": "string",
-            "nullable": true
-          },
-          "captureType": {
-            "type": "string",
-            "nullable": true
-          },
-          "countable": {
-            "type": "boolean"
-          },
-          "order": {
-            "$ref": "#/components/schemas/NiubizOrder"
-          },
-          "dataMap": {
-            "$ref": "#/components/schemas/NiubizDataMap"
-          }
-        },
-        "additionalProperties": false
-      },
-      "NotificarComprobanteDto": {
-        "type": "object",
-        "properties": {
-          "ventaId": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "PreferenceItemDto": {
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "quantity": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "unitPrice": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
-      "ProblemDetails": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "nullable": true
-          },
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "status": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "detail": {
-            "type": "string",
-            "nullable": true
-          },
-          "instance": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": { }
-      },
-      "ProductoDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "nombre": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "marca": {
-            "type": "string",
-            "nullable": true
-          },
-          "color": {
-            "type": "string",
-            "nullable": true
-          },
-          "precio": {
-            "type": "number",
-            "format": "double"
-          },
-          "precioDescuento": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "stock": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "activo": {
-            "type": "boolean"
-          },
-          "talla": {
-            "type": "string",
-            "nullable": true
-          },
-          "code": {
-            "type": "string",
-            "nullable": true
-          },
-          "imagen": {
-            "type": "string",
-            "nullable": true
-          },
-          "imagen2": {
-            "type": "string",
-            "nullable": true
-          },
-          "imagen3": {
-            "type": "string",
-            "nullable": true
-          },
-          "categoria": {
-            "type": "string",
-            "nullable": true
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "additionalProperties": false
-      },
-      "ProductoDtoApiResponse": {
-        "type": "object",
-        "properties": {
-          "success": {
-            "type": "boolean"
-          },
-          "message": {
-            "type": "string",
-            "nullable": true
-          },
-          "error": {
-            "type": "string",
-            "nullable": true
-          },
-          "errors": {
-            "nullable": true
-          },
-          "data": {
-            "$ref": "#/components/schemas/ProductoDto"
-          }
-        },
-        "additionalProperties": false
-      },
-      "ProductoDtoIEnumerableApiResponse": {
-        "type": "object",
-        "properties": {
-          "success": {
-            "type": "boolean"
-          },
-          "message": {
-            "type": "string",
-            "nullable": true
-          },
-          "error": {
-            "type": "string",
-            "nullable": true
-          },
-          "errors": {
-            "nullable": true
-          },
-          "data": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProductoDto"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "PusherAuthRequest": {
-        "type": "object",
-        "properties": {
-          "socket_id": {
-            "type": "string",
-            "nullable": true
-          },
-          "channel_name": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "RechazoVoucherDto": {
-        "type": "object",
-        "properties": {
-          "observacion": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "RegisterDto": {
-        "required": [
-          "apellido",
-          "email",
-          "fecha_nacimiento",
-          "nombre",
-          "password"
-        ],
+      "AuthRegisterDto": {
         "type": "object",
         "properties": {
           "email": {
-            "minLength": 1,
             "type": "string",
-            "format": "email"
+            "nullable": true
           },
           "password": {
-            "minLength": 6,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "nombre": {
-            "maxLength": 50,
-            "minLength": 0,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "apellido": {
-            "maxLength": 50,
-            "minLength": 0,
-            "type": "string"
-          },
-          "fecha_nacimiento": {
             "type": "string",
-            "format": "date-time"
+            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "Rol": {
-        "required": [
-          "nombre"
-        ],
+      "CreateCategoriaDto": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "nombre": {
-            "maxLength": 50,
-            "minLength": 1,
-            "type": "string"
-          },
-          "descripcion": {
             "type": "string",
             "nullable": true
-          },
-          "creadoPor": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "creadoEn": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "actualizadoEn": {
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateOrdenDto": {
+        "type": "object",
+        "properties": {
+          "pickupAt": {
             "type": "string",
             "format": "date-time"
           }
         },
         "additionalProperties": false
       },
-      "SetActivoDto": {
+      "IniciarPagoYapeDto": {
+        "type": "object",
+        "properties": {
+          "yapeQrPayload": {
+            "type": "string",
+            "nullable": true
+          },
+          "nota": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SetProductoActivoDto": {
         "type": "object",
         "properties": {
           "activo": {
@@ -3776,229 +1016,36 @@
         },
         "additionalProperties": false
       },
-      "TblEnviosCreateDto": {
-        "required": [
-          "direccion",
-          "dni",
-          "localidad",
-          "provincia",
-          "region",
-          "telefono",
-          "userId"
-        ],
+      "UpdateCarritoItemDto": {
         "type": "object",
         "properties": {
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "direccion": {
-            "maxLength": 255,
-            "minLength": 1,
-            "type": "string"
-          },
-          "region": {
-            "maxLength": 100,
-            "minLength": 1,
-            "type": "string"
-          },
-          "provincia": {
-            "maxLength": 100,
-            "minLength": 1,
-            "type": "string"
-          },
-          "localidad": {
-            "maxLength": 100,
-            "minLength": 1,
-            "type": "string"
-          },
-          "dni": {
-            "minLength": 1,
-            "pattern": "^\\d{8}$",
-            "type": "string"
-          },
-          "telefono": {
-            "minLength": 1,
-            "pattern": "^\\+?51\\d{9}$",
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "TblEnviosResponseDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "direccion": {
-            "type": "string",
-            "nullable": true
-          },
-          "region": {
-            "type": "string",
-            "nullable": true
-          },
-          "provincia": {
-            "type": "string",
-            "nullable": true
-          },
-          "localidad": {
-            "type": "string",
-            "nullable": true
-          },
-          "dni": {
-            "type": "string",
-            "nullable": true
-          },
-          "telefono": {
-            "type": "string",
-            "nullable": true
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "additionalProperties": false
-      },
-      "TblEnviosUpdateDto": {
-        "type": "object",
-        "properties": {
-          "direccion": {
-            "maxLength": 255,
-            "type": "string",
-            "nullable": true
-          },
-          "region": {
-            "maxLength": 100,
-            "type": "string",
-            "nullable": true
-          },
-          "provincia": {
-            "maxLength": 100,
-            "type": "string",
-            "nullable": true
-          },
-          "localidad": {
-            "maxLength": 100,
-            "type": "string",
-            "nullable": true
-          },
-          "dni": {
-            "pattern": "^\\d{8}$",
-            "type": "string",
-            "nullable": true
-          },
-          "telefono": {
-            "pattern": "^\\+?51\\d{9}$",
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "TestEmailDto": {
-        "type": "object",
-        "properties": {
-          "email": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateCartItemDto": {
-        "required": [
-          "quantity"
-        ],
-        "type": "object",
-        "properties": {
-          "quantity": {
-            "maximum": 10,
-            "minimum": 1,
+          "cantidad": {
             "type": "integer",
             "format": "int32"
           }
         },
         "additionalProperties": false
       },
-      "UpdateRolDto": {
+      "UpdateCategoriaDto": {
         "type": "object",
         "properties": {
           "nombre": {
             "type": "string",
             "nullable": true
-          },
-          "descripcion": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "UpdateUserDto": {
+      "ValidarPagoDto": {
         "type": "object",
         "properties": {
-          "nombre": {
-            "maxLength": 50,
-            "minLength": 0,
+          "resultado": {
             "type": "string",
             "nullable": true
           },
-          "apellido": {
-            "maxLength": 50,
-            "minLength": 0,
+          "nota": {
             "type": "string",
             "nullable": true
-          },
-          "fecha_nacimiento": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UserDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "nombre": {
-            "type": "string",
-            "nullable": true
-          },
-          "apellido": {
-            "type": "string",
-            "nullable": true
-          },
-          "fecha_nacimiento": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "created_at": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updated_at": {
-            "type": "string",
-            "format": "date-time"
           }
         },
         "additionalProperties": false
@@ -4007,7 +1054,7 @@
     "securitySchemes": {
       "Bearer": {
         "type": "apiKey",
-        "description": "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+        "description": "Authorization: Bearer {token}",
         "name": "Authorization",
         "in": "header"
       }

@@ -1,56 +1,58 @@
-
-// Program.cs (Configuraci?n completa)
-using apitextil.Data;
-
-using apitextil.Services;
-using apitextil.Services.apitextil.Services;
+using Apitextil.Data;
+using Apitextil.Services.Auth;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using System.Text.Json;
-AppDomain.CurrentDomain.UnhandledException += (sender, e) =>
-{
-    Console.WriteLine("?? Unhandled Exception: " + e.ExceptionObject);
-};
-
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Controllers
 builder.Services.AddControllers();
 
-// Database
-// Database con reintentos habilitados y configuraci?n segura
+
+// JSON camelCase
+builder.Services.ConfigureHttpJsonOptions(options =>
+{
+    options.SerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+});
+
+// Upload limit (10MB)
+builder.Services.Configure<FormOptions>(options =>
+{
+    options.MultipartBodyLengthLimit = 10 * 1024 * 1024;
+});
+
+// CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod());
+});
+
+// DB (MySQL + Pomelo)
 builder.Services.AddDbContext<EcommerceContext>(options =>
 {
     var cs = builder.Configuration.GetConnectionString("DefaultConnection");
-
-    options.UseMySql(
-        cs,
-        ServerVersion.AutoDetect(cs),
-        mySqlOptions =>
-        {
-            // ?? Reintentos autom?ticos en fallos transitorios
-            mySqlOptions.EnableRetryOnFailure(
-                maxRetryCount: 5,
-                maxRetryDelay: TimeSpan.FromSeconds(10),
-                errorNumbersToAdd: null);
-        });
+    options.UseMySql(cs, ServerVersion.AutoDetect(cs));
 });
 
+// Services
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<Apitextil.Services.Carrito.ICarritoService, Apitextil.Services.Carrito.CarritoService>();
+builder.Services.AddScoped<Apitextil.Services.Categorias.ICategoriaService, Apitextil.Services.Categorias.CategoriaService>();
+builder.Services.AddScoped<Apitextil.Services.Productos.IProductoService, Apitextil.Services.Productos.ProductoService>();
+builder.Services.AddScoped<Apitextil.Services.Ordenes.IOrdenService, Apitextil.Services.Ordenes.OrdenService>();
+builder.Services.AddScoped<Apitextil.Services.Pagos.IPagoService, Apitextil.Services.Pagos.PagoService>();
+builder.Services.AddScoped<Apitextil.Services.Ordenes.IAdminOrdenService, Apitextil.Services.Ordenes.AdminOrdenService>();
 
 
-
-// Para permitir archivos grandes (opcional)
-builder.Services.Configure<FormOptions>(options =>
-{
-    options.MultipartBodyLengthLimit = 10 * 1024 * 1024; // 10MB
-});
-// JWT Configuration
+// JWT
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -63,59 +65,36 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
             ValidAudience = builder.Configuration["JwtSettings:Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:SecretKey"] ??
-                "TuSupercalifragilisticoSecretoDeAlMenos32Caracteres")),
-            ClockSkew = TimeSpan.Zero // ?? AGREGAR ESTA LÍNEA
+                Encoding.UTF8.GetBytes(
+                    builder.Configuration["JwtSettings:SecretKey"]
+                    ?? "TuSupercalifragilisticoSecretoDeAlMenos32Caracteres")),
+            ClockSkew = TimeSpan.Zero
         };
     });
 
-// Configurar JSON options
-builder.Services.ConfigureHttpJsonOptions(options =>
-{
-    options.SerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
-});
+builder.Services.AddAuthorization();
 
-// CORS
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAll", policy =>
-    {
-        policy.AllowAnyOrigin()
-              .AllowAnyHeader()
-              .AllowAnyMethod();
-    });
-});
-
-// Swagger
+// Swagger + JWT
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo
-    {
-        Title = "API Textil",
-        Version = "v1"
-    });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "API Harumi", Version = "v1" });
+
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
-        Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+        Description = "Authorization: Bearer {token}",
         Name = "Authorization",
         In = ParameterLocation.Header,
         Type = SecuritySchemeType.ApiKey,
         Scheme = "Bearer"
     });
-    c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
             new OpenApiSecurityScheme
             {
-                Reference = new OpenApiReference
-                {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                },
-                Scheme = "oauth2",
-                Name = "Bearer",
-                In = ParameterLocation.Header,
+                Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" }
             },
             new List<string>()
         }
@@ -123,48 +102,29 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 var app = builder.Build();
-// ?????? AGREGAR ESTO ANTES DE UseStaticFiles ??????
 
-// Crear carpeta uploads si no existe
-var uploadsPath = Path.Combine(Directory.GetCurrentDirectory(), "uploads");
-if (!Directory.Exists(uploadsPath))
-{
-    Directory.CreateDirectory(uploadsPath);
-    Console.WriteLine($"? Carpeta uploads creada en: {uploadsPath}");
-}
+// Asegurar wwwroot + carpeta vouchers
+var webRoot = app.Environment.WebRootPath ?? Path.Combine(app.Environment.ContentRootPath, "wwwroot");
+Directory.CreateDirectory(webRoot);
+Directory.CreateDirectory(Path.Combine(webRoot, "uploads", "vouchers"));
 
-var enviosPath = Path.Combine(uploadsPath, "envios");
-if (!Directory.Exists(enviosPath))
-{
-    Directory.CreateDirectory(enviosPath);
-    Console.WriteLine($"? Carpeta envios creada en: {enviosPath}");
-}
-
-// ?????? FIN DE CREACIÓN DE CARPETAS ??????
-
-// Configure the HTTP request pipeline.
+// Pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
-app.UseCors("AllowAll");
+// NO UseHttpsRedirection si tu launchSettings es solo http (evita problemas). [web:193]
 
-// Configuración de archivos estáticos
-app.UseStaticFiles();
-
-app.UseStaticFiles(new StaticFileOptions
-{
-    FileProvider = new PhysicalFileProvider(uploadsPath), // ?? Usar la variable
-    RequestPath = "/uploads"
-});
+app.UseStaticFiles(); // sirve wwwroot (incluye /uploads/...) [web:52]
 
 app.UseRouting();
+
+app.UseCors("AllowAll");
+
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-
 app.Run();

@@ -1,864 +1,438 @@
 [
   {
-    "ContainingType": "apitextil.Controllers.AdminAuthController",
-    "Method": "Login",
-    "RelativePath": "api/AdminAuth/login",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "apitextil.DTOs.AuthAdminDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.DTOs.AdminResponseDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.AdminsController",
-    "Method": "GetAll",
-    "RelativePath": "api/Admins",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[apitextil.Models.LoginAdmin, apitextil, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.AdminsController",
-    "Method": "Create",
-    "RelativePath": "api/Admins",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "apitextil.DTOs.CreateAdminDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.Models.LoginAdmin",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.AdminsController",
-    "Method": "GetById",
-    "RelativePath": "api/Admins/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.Models.LoginAdmin",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.AdminsController",
-    "Method": "Delete",
-    "RelativePath": "api/Admins/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.AdminsController",
-    "Method": "ToggleActive",
-    "RelativePath": "api/Admins/{id}/toggle",
+    "ContainingType": "Apitextil.Controllers.AdminOrdenesController",
+    "Method": "CambiarEstado",
+    "RelativePath": "api/admin/ordenes/{id}/estado",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "adminUsuarioId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "dto",
+        "Type": "Apitextil.DTOs.Ordenes.AdminCambiarEstadoOrdenDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "apitextil.Controllers.apitextil.Controllers.AuthController",
-    "Method": "ChangePassword",
-    "RelativePath": "api/Auth/change-password",
+    "ContainingType": "Apitextil.Controllers.AdminPagosController",
+    "Method": "Validar",
+    "RelativePath": "api/admin/pagos/{pagoId}/validar",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "changePasswordDto",
-        "Type": "apitextil.DTOs.apitextil.DTOs.ChangePasswordDto",
+        "Name": "pagoId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "adminUsuarioId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "dto",
+        "Type": "Apitextil.DTOs.Pagos.ValidarPagoDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "apitextil.Controllers.apitextil.Controllers.AuthController",
+    "ContainingType": "Apitextil.Controllers.AuthController",
     "Method": "Login",
-    "RelativePath": "api/Auth/login",
+    "RelativePath": "api/auth/login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "loginDto",
-        "Type": "apitextil.DTOs.apitextil.DTOs.LoginDto",
+        "Name": "dto",
+        "Type": "Apitextil.DTOs.Auth.AuthLoginDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.DTOs.apitextil.DTOs.AuthResponseDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "apitextil.Controllers.apitextil.Controllers.AuthController",
-    "Method": "GetProfile",
-    "RelativePath": "api/Auth/profile",
+    "ContainingType": "Apitextil.Controllers.AuthController",
+    "Method": "Me",
+    "RelativePath": "api/auth/me",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.DTOs.apitextil.DTOs.UserDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.apitextil.Controllers.AuthController",
-    "Method": "UpdateProfile",
-    "RelativePath": "api/Auth/profile",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "updateDto",
-        "Type": "apitextil.DTOs.apitextil.DTOs.UpdateUserDto",
-        "IsRequired": true
-      }
-    ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "apitextil.Controllers.apitextil.Controllers.AuthController",
-    "Method": "DeleteAccount",
-    "RelativePath": "api/Auth/profile",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.apitextil.Controllers.AuthController",
+    "ContainingType": "Apitextil.Controllers.AuthController",
     "Method": "Register",
-    "RelativePath": "api/Auth/register",
+    "RelativePath": "api/auth/register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "registerDto",
-        "Type": "apitextil.DTOs.apitextil.DTOs.RegisterDto",
+        "Name": "dto",
+        "Type": "Apitextil.DTOs.Auth.AuthRegisterDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.DTOs.apitextil.DTOs.AuthResponseDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "apitextil.Controllers.apitextil.Controllers.AuthController",
-    "Method": "GetUserById",
-    "RelativePath": "api/Auth/user/{id}",
+    "ContainingType": "Apitextil.Controllers.CarritoController",
+    "Method": "GetActual",
+    "RelativePath": "api/carrito/actual",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
+        "Name": "usuarioId",
+        "Type": "System.Int64",
+        "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.DTOs.apitextil.DTOs.UserDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "apitextil.Controllers.apitextil.Controllers.AuthController",
-    "Method": "GetAllUsers",
-    "RelativePath": "api/Auth/users",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[apitextil.DTOs.apitextil.DTOs.UserDto, apitextil, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.CartController",
-    "Method": "AddToCart",
-    "RelativePath": "api/Cart",
+    "ContainingType": "Apitextil.Controllers.CarritoController",
+    "Method": "AddItem",
+    "RelativePath": "api/carrito/items",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "addToCartDto",
-        "Type": "apitextil.Models.DTOs.AddToCartDto",
+        "Name": "usuarioId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "dto",
+        "Type": "Apitextil.DTOs.Carrito.AddCarritoItemDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.Models.DTOs.CartItemDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "apitextil.Controllers.CartController",
-    "Method": "UpdateCartItem",
-    "RelativePath": "api/Cart/{cartItemId}",
-    "HttpMethod": "PUT",
+    "ContainingType": "Apitextil.Controllers.CarritoController",
+    "Method": "UpdateItem",
+    "RelativePath": "api/carrito/items/{itemId}",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "cartItemId",
-        "Type": "System.Int32",
+        "Name": "usuarioId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "itemId",
+        "Type": "System.Int64",
         "IsRequired": true
       },
       {
-        "Name": "updateDto",
-        "Type": "apitextil.Models.DTOs.UpdateCartItemDto",
+        "Name": "dto",
+        "Type": "Apitextil.DTOs.Carrito.UpdateCarritoItemDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.Models.DTOs.CartItemDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "apitextil.Controllers.CartController",
-    "Method": "RemoveFromCart",
-    "RelativePath": "api/Cart/{cartItemId}/user/{userId}",
+    "ContainingType": "Apitextil.Controllers.CarritoController",
+    "Method": "DeleteItem",
+    "RelativePath": "api/carrito/items/{itemId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "cartItemId",
-        "Type": "System.Int32",
-        "IsRequired": true
+        "Name": "usuarioId",
+        "Type": "System.Int64",
+        "IsRequired": false
       },
       {
-        "Name": "userId",
-        "Type": "System.Int32",
+        "Name": "itemId",
+        "Type": "System.Int64",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "apitextil.Controllers.CartController",
-    "Method": "GetUserCart",
-    "RelativePath": "api/Cart/{userId}",
+    "ContainingType": "Apitextil.Controllers.CategoriasController",
+    "Method": "GetAll",
+    "RelativePath": "api/categorias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Apitextil.Controllers.CategoriasController",
+    "Method": "Create",
+    "RelativePath": "api/categorias",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Apitextil.DTOs.Categorias.CreateCategoriaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Apitextil.Controllers.CategoriasController",
+    "Method": "GetById",
+    "RelativePath": "api/categorias/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
-        "Type": "System.Int32",
+        "Name": "id",
+        "Type": "System.Int64",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.Models.DTOs.CartSummaryDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "apitextil.Controllers.CartController",
-    "Method": "ClearCart",
-    "RelativePath": "api/Cart/clear/{userId}",
+    "ContainingType": "Apitextil.Controllers.CategoriasController",
+    "Method": "Update",
+    "RelativePath": "api/categorias/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Apitextil.DTOs.Categorias.UpdateCategoriaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Apitextil.Controllers.CategoriasController",
+    "Method": "Delete",
+    "RelativePath": "api/categorias/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
-        "Type": "System.Int32",
+        "Name": "id",
+        "Type": "System.Int64",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "apitextil.Controllers.CartController",
-    "Method": "GetCartItemCount",
-    "RelativePath": "api/Cart/count/{userId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Int32",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.ChatController",
-    "Method": "EnviarContacto",
-    "RelativePath": "api/Chat/contacto",
+    "ContainingType": "Apitextil.Controllers.OrdenesController",
+    "Method": "Create",
+    "RelativePath": "api/ordenes",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "apitextil.DTOs.AtencionClienteDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.ChatController",
-    "Method": "Enviar",
-    "RelativePath": "api/Chat/enviar",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "mensaje",
-        "Type": "apitextil.DTOs.ChatMessageDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.ChatController",
-    "Method": "EnviarYGuardar",
-    "RelativePath": "api/Chat/enviar-y-guardar",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "apitextil.Controllers.ChatController\u002BEnviarYGuardarDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.ChatController",
-    "Method": "GuardarMensajeChat",
-    "RelativePath": "api/Chat/guardar-mensaje",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "apitextil.DTOs.MensajeChatDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.ChatController",
-    "Method": "ObtenerHistorial",
-    "RelativePath": "api/Chat/historial/{atencionId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "atencionId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.ChatController",
-    "Method": "ObtenerHistorialPorUsuario",
-    "RelativePath": "api/Chat/historial/usuario/{userId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.ChatController",
-    "Method": "MarcarComoLeidos",
-    "RelativePath": "api/Chat/marcar-leidos/{atencionId}/{emisorTipo}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "atencionId",
-        "Type": "System.Int32",
-        "IsRequired": true
+        "Name": "usuarioId",
+        "Type": "System.Int64",
+        "IsRequired": false
       },
       {
-        "Name": "emisorTipo",
-        "Type": "System.String",
+        "Name": "dto",
+        "Type": "Apitextil.DTOs.Ordenes.CreateOrdenDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "apitextil.Controllers.ChatController",
-    "Method": "ObtenerMensajes",
-    "RelativePath": "api/Chat/mensajes",
+    "ContainingType": "Apitextil.Controllers.OrdenesController",
+    "Method": "GetAll",
+    "RelativePath": "api/ordenes",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "usuarioId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "apitextil.Controllers.ChatController",
-    "Method": "ObtenerMensajePorId",
-    "RelativePath": "api/Chat/mensajes/{id}",
+    "ContainingType": "Apitextil.Controllers.OrdenesController",
+    "Method": "GetById",
+    "RelativePath": "api/ordenes/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Int64",
         "IsRequired": true
+      },
+      {
+        "Name": "usuarioId",
+        "Type": "System.Int64",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "apitextil.Controllers.ChatController",
-    "Method": "ActualizarEstado",
-    "RelativePath": "api/Chat/mensajes/{id}/estado",
-    "HttpMethod": "PUT",
+    "ContainingType": "Apitextil.Controllers.OrdenesController",
+    "Method": "Historial",
+    "RelativePath": "api/ordenes/{id}/historial-estados",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Int64",
         "IsRequired": true
       },
       {
-        "Name": "dto",
-        "Type": "apitextil.Controllers.ActualizarEstadoDto",
-        "IsRequired": true
+        "Name": "usuarioId",
+        "Type": "System.Int64",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "apitextil.Controllers.ChatController",
-    "Method": "ObtenerMensajesPorEstado",
-    "RelativePath": "api/Chat/mensajes/estado/{estado}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "estado",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ComprobantesController",
-    "Method": "Emitir",
-    "RelativePath": "api/Comprobantes/emitir",
+    "ContainingType": "Apitextil.Controllers.OrdenPagosController",
+    "Method": "Iniciar",
+    "RelativePath": "api/ordenes/{ordenId}/pago/yape/iniciar",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "ComprobantesController\u002BEmitirComprobanteDto",
+        "Name": "ordenId",
+        "Type": "System.Int64",
         "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ComprobantesController",
-    "Method": "TestConfig",
-    "RelativePath": "api/Comprobantes/test-config",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.EnviosController",
-    "Method": "ConfirmarEntrega",
-    "RelativePath": "api/Envios/confirmar-entrega/{ventaId}",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
+      },
       {
-        "Name": "ventaId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.EnviosController",
-    "Method": "AddDocumento",
-    "RelativePath": "api/Envios/documentos",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "documentoDto",
-        "Type": "apitextil.DTOs.CreateDocumentoEnvioDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.EnviosController",
-    "Method": "GetDocumentosByVentaId",
-    "RelativePath": "api/Envios/documentos/{ventaId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "ventaId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.EnviosController",
-    "Method": "GetEstadosEnvio",
-    "RelativePath": "api/Envios/estados",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.EnviosController",
-    "Method": "GetMisSeguimientos",
-    "RelativePath": "api/Envios/mis-seguimientos",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.EnviosController",
-    "Method": "AuthPusher",
-    "RelativePath": "api/Envios/pusher/auth",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "apitextil.Controllers.PusherAuthRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.EnviosController",
-    "Method": "AddSeguimiento",
-    "RelativePath": "api/Envios/seguimiento",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "seguimientoDto",
-        "Type": "CreateSeguimientoEnvioDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.EnviosController",
-    "Method": "GetSeguimientoByVentaId",
-    "RelativePath": "api/Envios/seguimiento/{ventaId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "ventaId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.EnviosController",
-    "Method": "UploadDocumento",
-    "RelativePath": "api/Envios/upload-documento",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "venta_id",
-        "Type": "System.Int32",
+        "Name": "usuarioId",
+        "Type": "System.Int64",
         "IsRequired": false
       },
       {
-        "Name": "tipo_documento",
-        "Type": "System.String",
+        "Name": "dto",
+        "Type": "Apitextil.DTOs.Pagos.IniciarPagoYapeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Apitextil.Controllers.PagosController",
+    "Method": "SubirVoucher",
+    "RelativePath": "api/pagos/{pagoId}/voucher",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pagoId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "usuarioId",
+        "Type": "System.Int64",
         "IsRequired": false
       },
       {
-        "Name": "archivo",
+        "Name": "Imagen",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.NiubizController",
-    "Method": "ProcesarPago",
-    "RelativePath": "api/Niubiz/pago",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "apitextil.Services.NiubizVentaRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.NiubizController",
-    "Method": "ObtenerToken",
-    "RelativePath": "api/Niubiz/token",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.ProductosController",
-    "Method": "GetAllProductos",
-    "RelativePath": "api/Productos",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.Controllers.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[apitextil.DTOs.ProductoDto, apitextil, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
       },
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 500
+        "Name": "NroOperacion",
+        "Type": "System.String",
+        "IsRequired": false
       }
-    ]
+    ],
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "apitextil.Controllers.ProductosController",
-    "Method": "CreateProducto",
-    "RelativePath": "api/Productos",
+    "ContainingType": "Apitextil.Controllers.ProductosController",
+    "Method": "GetAll",
+    "RelativePath": "api/productos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoriaId",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "activo",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Apitextil.Controllers.ProductosController",
+    "Method": "Create",
+    "RelativePath": "api/productos",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "CategoriaId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
       {
         "Name": "Nombre",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "Description",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Marca",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Color",
+        "Name": "Descripcion",
         "Type": "System.String",
         "IsRequired": false
       },
@@ -868,126 +442,51 @@
         "IsRequired": false
       },
       {
-        "Name": "PrecioDescuento",
-        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Name": "Activo",
+        "Type": "System.Boolean",
         "IsRequired": false
       },
       {
-        "Name": "Stock",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Talla",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Code",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "imagen",
+        "Name": "Foto",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
-        "Name": "imagen2",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
-        "Name": "imagen3",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
-        "Name": "Categoria",
-        "Type": "System.String",
         "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.Controllers.ApiResponse\u00601[[apitextil.DTOs.ProductoDto, apitextil, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 201
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "apitextil.Controllers.ProductosController",
-    "Method": "GetProductoById",
-    "RelativePath": "api/Productos/{id}",
+    "ContainingType": "Apitextil.Controllers.ProductosController",
+    "Method": "GetById",
+    "RelativePath": "api/productos/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.Controllers.ApiResponse\u00601[[apitextil.DTOs.ProductoDto, apitextil, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 404
-      },
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 500
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.ProductosController",
-    "Method": "DeleteProducto",
-    "RelativePath": "api/Productos/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Int64",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "apitextil.Controllers.ProductosController",
-    "Method": "UpdateProducto",
-    "RelativePath": "api/Productos/{id}",
+    "ContainingType": "Apitextil.Controllers.ProductosController",
+    "Method": "Update",
+    "RelativePath": "api/productos/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Int64",
         "IsRequired": true
+      },
+      {
+        "Name": "CategoriaId",
+        "Type": "System.Int64",
+        "IsRequired": false
       },
       {
         "Name": "Nombre",
@@ -995,686 +494,44 @@
         "IsRequired": false
       },
       {
-        "Name": "Description",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Marca",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Color",
+        "Name": "Descripcion",
         "Type": "System.String",
         "IsRequired": false
       },
       {
         "Name": "Precio",
-        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "System.Decimal",
         "IsRequired": false
       },
       {
-        "Name": "PrecioDescuento",
-        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Name": "Activo",
+        "Type": "System.Boolean",
         "IsRequired": false
       },
       {
-        "Name": "Stock",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "Talla",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Code",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "imagen",
+        "Name": "Foto",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
-        "Name": "imagen2",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
-        "Name": "imagen3",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
-        "Name": "Categoria",
-        "Type": "System.String",
         "IsRequired": false
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "apitextil.Controllers.ProductosController",
+    "ContainingType": "Apitextil.Controllers.ProductosController",
     "Method": "SetActivo",
-    "RelativePath": "api/Productos/{id}/activo",
+    "RelativePath": "api/productos/{id}/activo",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Int64",
         "IsRequired": true
       },
       {
         "Name": "dto",
-        "Type": "apitextil.Controllers.ProductosController\u002BSetActivoDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.ProductosController",
-    "Method": "GetProductosByCategoria",
-    "RelativePath": "api/Productos/categoria/{categoria}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "categoria",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.Controllers.ApiResponse\u00601[[System.Collections.Generic.IEnumerable\u00601[[apitextil.DTOs.ProductoDto, apitextil, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      },
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 500
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.RolesController",
-    "Method": "GetAll",
-    "RelativePath": "api/Roles",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[apitextil.Models.Rol, apitextil, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.RolesController",
-    "Method": "Create",
-    "RelativePath": "api/Roles",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "apitextil.DTOs.CreateRolDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.Models.Rol",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.RolesController",
-    "Method": "GetById",
-    "RelativePath": "api/Roles/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.Models.Rol",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.RolesController",
-    "Method": "Update",
-    "RelativePath": "api/Roles/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "dto",
-        "Type": "apitextil.DTOs.UpdateRolDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.RolesController",
-    "Method": "Delete",
-    "RelativePath": "api/Roles/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.TblEnviosController",
-    "Method": "Create",
-    "RelativePath": "api/TblEnvios",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "apitextil.DTOs.TblEnviosCreateDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.DTOs.TblEnviosResponseDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.TblEnviosController",
-    "Method": "GetAll",
-    "RelativePath": "api/TblEnvios",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[apitextil.DTOs.TblEnviosResponseDto, apitextil, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.TblEnviosController",
-    "Method": "GetById",
-    "RelativePath": "api/TblEnvios/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.DTOs.TblEnviosResponseDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.TblEnviosController",
-    "Method": "Update",
-    "RelativePath": "api/TblEnvios/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "dto",
-        "Type": "apitextil.DTOs.TblEnviosUpdateDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.DTOs.TblEnviosResponseDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.TblEnviosController",
-    "Method": "Delete",
-    "RelativePath": "api/TblEnvios/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.TblEnviosController",
-    "Method": "ExistsByDni",
-    "RelativePath": "api/TblEnvios/exists/dni/{dni}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dni",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Boolean",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.TblEnviosController",
-    "Method": "ExistsByUserId",
-    "RelativePath": "api/TblEnvios/exists/user/{userId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Boolean",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.TblEnviosController",
-    "Method": "GetByProvincia",
-    "RelativePath": "api/TblEnvios/provincia/{provincia}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "provincia",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[apitextil.DTOs.TblEnviosResponseDto, apitextil, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.TblEnviosController",
-    "Method": "GetByRegion",
-    "RelativePath": "api/TblEnvios/region/{region}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "region",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[apitextil.DTOs.TblEnviosResponseDto, apitextil, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.TblEnviosController",
-    "Method": "GetByUserId",
-    "RelativePath": "api/TblEnvios/user/{userId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "apitextil.DTOs.TblEnviosResponseDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "apitextil.Controllers.VentasController",
-    "Method": "CrearVenta",
-    "RelativePath": "api/Ventas",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "apitextil.DTOs.Orders.CreateVentaDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.VentasController",
-    "Method": "ObtenerVentas",
-    "RelativePath": "api/Ventas",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.VentasController",
-    "Method": "CrearVentaConDetalles",
-    "RelativePath": "api/Ventas/completa",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "apitextil.DTOs.Orders.CreateVentaConDetallesDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.VentasController",
-    "Method": "NotificarComprobante",
-    "RelativePath": "api/Ventas/notificar-comprobante",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "apitextil.Controllers.VentasController\u002BNotificarComprobanteDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.PagoVoucherController",
-    "Method": "ObtenerConfigPago",
-    "RelativePath": "api/Ventas/pago/config",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.PagoVoucherController",
-    "Method": "Ping",
-    "RelativePath": "api/Ventas/pago/ping",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.PagoVoucherController",
-    "Method": "RechazarVoucher",
-    "RelativePath": "api/Ventas/pago/ventas/{ventaId}/voucher/rechazar",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "ventaId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "body",
-        "Type": "apitextil.Controllers.PagoVoucherController\u002BRechazoVoucherDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.PagoVoucherController",
-    "Method": "VerificarVoucher",
-    "RelativePath": "api/Ventas/pago/ventas/{ventaId}/voucher/verificar",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "ventaId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.PagoVoucherController",
-    "Method": "SubirVoucherCompleto",
-    "RelativePath": "api/Ventas/pago/voucher-completo",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Voucher",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
-        "Name": "UserId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Total",
-        "Type": "System.Decimal",
-        "IsRequired": false
-      },
-      {
-        "Name": "NumeroOperacion",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "ClienteNombres",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "ClienteApellidos",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "ClienteDNI",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "TipoComprobante",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Ruc",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "RazonSocial",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Detalles",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.VentasController",
-    "Method": "CrearPreferenciaPago",
-    "RelativePath": "api/Ventas/preferencia",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "apitextil.DTOs.Orders.CreatePreferenceRequestDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "apitextil.Controllers.VentasController",
-    "Method": "TestEmail",
-    "RelativePath": "api/Ventas/test-email",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "apitextil.Controllers.VentasController\u002BTestEmailDto",
+        "Type": "Apitextil.DTOs.Productos.SetProductoActivoDto",
         "IsRequired": true
       }
     ],

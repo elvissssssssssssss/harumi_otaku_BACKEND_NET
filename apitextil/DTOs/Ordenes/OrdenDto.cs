@@ -15,6 +15,13 @@ public class OrdenDto
     public int ItemsCount { get; set; }
     public int ItemsCantidadTotal { get; set; }
     public decimal ItemsSubtotalTotal { get; set; }
+    // ... campos existentes
+    public long? PagoId { get; set; }
+    public string? PagoEstado { get; set; }  // "PENDIENTE", "EN_REVISION", "CONFIRMADO", "RECHAZADO"
+                                             // ✅ Agrega info del voucher Yape
+    public string? VoucherImagenUrl { get; set; }
+    public string? NroOperacion { get; set; }
+    public DateTime? PaidAt { get; set; }
     public List<OrdenItemDto> Items { get; set; } = new();
 }
 

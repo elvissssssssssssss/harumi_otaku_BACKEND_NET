@@ -124,6 +124,22 @@ public class OrdenService : IOrdenService
             orden.EstadoNombre = estado.Nombre;
         }
 
+        // ✅ Traer info del pago y voucher
+        var pago = await _db.tblpagos.FirstOrDefaultAsync(p => p.OrdenId == ordenId);
+        if (pago != null)
+        {
+            orden.PagoId = pago.Id;
+            orden.PagoEstado = pago.Estado;
+
+            var voucher = await _db.tblpago_yape_voucher.FirstOrDefaultAsync(v => v.PagoId == pago.Id);
+            if (voucher != null)
+            {
+                orden.VoucherImagenUrl = voucher.VoucherImagenUrl;
+                orden.NroOperacion = voucher.NroOperacion;
+                orden.PaidAt = voucher.PaidAt;
+            }
+        }
+
         orden.Items = await _db.tblorden_items
             .Where(i => i.OrdenId == ordenId)
             .Join(_db.tblproductos,
@@ -148,6 +164,10 @@ public class OrdenService : IOrdenService
             from o in _db.tblordenes
             join e in _db.tblestados_orden on o.EstadoActualId equals e.Id
             join oi in _db.tblorden_items on o.Id equals oi.OrdenId into items
+            join p in _db.tblpagos on o.Id equals p.OrdenId into pagos
+            from pago in pagos.DefaultIfEmpty()
+            join v in _db.tblpago_yape_voucher on pago.Id equals v.PagoId into vouchers
+            from voucher in vouchers.DefaultIfEmpty()
             orderby o.CreatedAt descending
             select new OrdenDto
             {
@@ -159,13 +179,21 @@ public class OrdenService : IOrdenService
                 EstadoCodigo = e.Codigo,
                 EstadoNombre = e.Nombre,
                 CreatedAt = o.CreatedAt,
-
                 ItemsCount = items.Count(),
                 ItemsCantidadTotal = items.Sum(x => (int?)x.Cantidad) ?? 0,
-                ItemsSubtotalTotal = items.Sum(x => (decimal?)x.Subtotal) ?? 0m
+                ItemsSubtotalTotal = items.Sum(x => (decimal?)x.Subtotal) ?? 0m,
+
+                PagoId = pago != null ? pago.Id : (long?)null,
+                PagoEstado = pago != null ? pago.Estado : null,
+
+                // ✅ Info del voucher
+                VoucherImagenUrl = voucher != null ? voucher.VoucherImagenUrl : null,
+                NroOperacion = voucher != null ? voucher.NroOperacion : null,
+                PaidAt = voucher != null ? voucher.PaidAt : null
             }
         ).ToListAsync();
     }
+
 
 
     public async Task<List<OrdenEstadoHistorialDto>> GetHistorialAsync(long usuarioId, long ordenId)

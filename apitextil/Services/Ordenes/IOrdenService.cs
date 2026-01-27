@@ -8,4 +8,7 @@ public interface IOrdenService
     Task<List<OrdenDto>> GetAllByUsuarioAsync(long usuarioId);
     Task<OrdenDto?> GetByIdAsync(long usuarioId, long ordenId);
     Task<List<OrdenEstadoHistorialDto>> GetHistorialAsync(long usuarioId, long ordenId);
+    Task<List<OrdenDto>> GetAllAsync();
+
+
 }

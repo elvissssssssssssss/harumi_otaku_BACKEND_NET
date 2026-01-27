@@ -10,6 +10,11 @@ public class OrdenDto
     public string? EstadoCodigo { get; set; }
     public string? EstadoNombre { get; set; }
     public DateTime CreatedAt { get; set; }
+
+    // ✅ agregados por orden
+    public int ItemsCount { get; set; }
+    public int ItemsCantidadTotal { get; set; }
+    public decimal ItemsSubtotalTotal { get; set; }
     public List<OrdenItemDto> Items { get; set; } = new();
 }
 

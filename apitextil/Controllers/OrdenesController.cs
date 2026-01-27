@@ -26,11 +26,18 @@ public class OrdenesController : ControllerBase
         }
     }
 
-
+    // ✅ CAMBIO CLAVE: usuarioId opcional (nullable + default)
     [HttpGet]
-    public async Task<IActionResult> GetAll([FromQuery] long usuarioId)
-        => Ok(await _service.GetAllByUsuarioAsync(usuarioId));
+    public async Task<IActionResult> GetAll([FromQuery] long? usuarioId = null)
+    {
+        if (usuarioId.HasValue)
+            return Ok(await _service.GetAllByUsuarioAsync(usuarioId.Value));
 
+        // admin (sin filtro)
+        return Ok(await _service.GetAllAsync());
+    }
+
+    // Deja estos 2 como estaban (usuarioId requerido):
     [HttpGet("{id:long}")]
     public async Task<IActionResult> GetById([FromRoute] long id, [FromQuery] long usuarioId)
     {
@@ -41,4 +48,6 @@ public class OrdenesController : ControllerBase
     [HttpGet("{id:long}/historial-estados")]
     public async Task<IActionResult> Historial([FromRoute] long id, [FromQuery] long usuarioId)
         => Ok(await _service.GetHistorialAsync(usuarioId, id));
+
+        
 }

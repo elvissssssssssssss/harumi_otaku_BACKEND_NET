@@ -142,6 +142,31 @@ public class OrdenService : IOrdenService
 
         return orden;
     }
+    public async Task<List<OrdenDto>> GetAllAsync()
+    {
+        return await (
+            from o in _db.tblordenes
+            join e in _db.tblestados_orden on o.EstadoActualId equals e.Id
+            join oi in _db.tblorden_items on o.Id equals oi.OrdenId into items
+            orderby o.CreatedAt descending
+            select new OrdenDto
+            {
+                Id = o.Id,
+                UsuarioId = o.UsuarioId,
+                PickupAt = o.PickupAt,
+                TotalAmount = o.TotalAmount,
+                EstadoActualId = o.EstadoActualId,
+                EstadoCodigo = e.Codigo,
+                EstadoNombre = e.Nombre,
+                CreatedAt = o.CreatedAt,
+
+                ItemsCount = items.Count(),
+                ItemsCantidadTotal = items.Sum(x => (int?)x.Cantidad) ?? 0,
+                ItemsSubtotalTotal = items.Sum(x => (decimal?)x.Subtotal) ?? 0m
+            }
+        ).ToListAsync();
+    }
+
 
     public async Task<List<OrdenEstadoHistorialDto>> GetHistorialAsync(long usuarioId, long ordenId)
     {

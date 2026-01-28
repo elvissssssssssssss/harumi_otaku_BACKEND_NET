@@ -536,5 +536,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "apitextil.Controllers.PusherAuthController",
+    "Method": "Auth",
+    "RelativePath": "api/pusher/auth",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "apitextil.Controllers.PusherAuthRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

@@ -905,6 +905,37 @@
           }
         }
       }
+    },
+    "/api/pusher/auth": {
+      "post": {
+        "tags": [
+          "PusherAuth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PusherAuthRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PusherAuthRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PusherAuthRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1001,6 +1032,20 @@
             "nullable": true
           },
           "nota": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PusherAuthRequest": {
+        "type": "object",
+        "properties": {
+          "socket_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "channel_name": {
             "type": "string",
             "nullable": true
           }

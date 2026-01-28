@@ -6,3 +6,12 @@ wwwroot\uploads\productos\8c836e9e4de442868d0849f6a7a3bee4.jpg
 wwwroot\uploads\productos\6b425cd61d854266b42589848b95eefa.jpg
 wwwroot\uploads\productos\01f2be681b334d2f8c9e340b8cffe938.jpg
 wwwroot\uploads\vouchers\57e692d381784895863da76cc12c31b8.png
+wwwroot\uploads\vouchers\bc0c8b6c49ba4739a6b0e6316319a26c.jpeg
+wwwroot\uploads\productos\d858f1602cf342bea203d19b2641c814.png
+wwwroot\uploads\productos\167779ac94a64213b22453eacf21429d.png
+wwwroot\uploads\productos\a367ca3433284c15939ed4ed107392e0.png
+wwwroot\uploads\productos\bab25d455e8e470db5fc8cefdd9c57aa.png
+wwwroot\uploads\productos\1d1fc250cae8410a9cb52f9cb4f3fca5.png
+wwwroot\uploads\productos\1cc02e5d38954d88937f8cbed493bb4f.png
+wwwroot\uploads\productos\8c093c90e96d496d891c6c6ac7d6207b.png
+wwwroot\uploads\productos\8edb63a68a7a4aa9bb6ba2ff9e17e428.png

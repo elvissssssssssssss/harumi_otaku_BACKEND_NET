@@ -1,17 +1,16 @@
-using Apitextil.Services.Notifications;
+using Apitextil.Services.Ordenes;
 using Apitextil.Data;
 using Apitextil.Services.Auth;
+using Apitextil.Services.Notifications;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-
-
 using System.Text;
-
-
 using System.Text.Json;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -48,6 +47,7 @@ builder.Services.AddDbContext<EcommerceContext>(options =>
 });
 
 // Services
+// Services
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<Apitextil.Services.Carrito.ICarritoService, Apitextil.Services.Carrito.CarritoService>();
 builder.Services.AddScoped<Apitextil.Services.Categorias.ICategoriaService, Apitextil.Services.Categorias.CategoriaService>();
@@ -56,7 +56,6 @@ builder.Services.AddScoped<Apitextil.Services.Ordenes.IOrdenService, Apitextil.S
 builder.Services.AddScoped<Apitextil.Services.Pagos.IPagoService, Apitextil.Services.Pagos.PagoService>();
 builder.Services.AddScoped<Apitextil.Services.Ordenes.IAdminOrdenService, Apitextil.Services.Ordenes.AdminOrdenService>();
 builder.Services.AddSingleton<IPusherService, PusherService>();
-
 
 
 // JWT

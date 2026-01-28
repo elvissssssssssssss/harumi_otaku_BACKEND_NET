@@ -15,19 +15,21 @@ public class PusherService : IPusherService
 
         var pusherOptions = new PusherOptions
         {
-            Cluster = configuration["Pusher:Cluster"] ?? "mt1",
+            Cluster = configuration["Pusher:Cluster"] ?? "us2",
             Encrypted = true
         };
 
         _pusher = new Pusher(
-            configuration["Pusher:AppId"] ?? throw new InvalidOperationException("Pusher:AppId no configurado"),
-            configuration["Pusher:Key"] ?? throw new InvalidOperationException("Pusher:Key no configurado"),
-            configuration["Pusher:Secret"] ?? throw new InvalidOperationException("Pusher:Secret no configurado"),
+            configuration["Pusher:AppId"] ?? "2107833",
+            configuration["Pusher:Key"] ?? "f4e6b23dca02881c8df9",
+            configuration["Pusher:Secret"] ?? "e00032aae46151b0fee5",
             pusherOptions
         );
 
         _logger.LogInformation("✅ PusherService inicializado - Cluster: {Cluster}", pusherOptions.Cluster);
     }
+
+    private static string GetChannel(long usuarioId) => $"private-user-{usuarioId}";
 
     public async Task SendOrdenCreadaAsync(long ordenId, long usuarioId, decimal total)
     {
@@ -44,7 +46,7 @@ public class PusherService : IPusherService
             };
 
             var result = await _pusher.TriggerAsync(
-                $"user-{usuarioId}",
+                GetChannel(usuarioId),
                 "orden-creada",
                 payload
             );
@@ -81,7 +83,7 @@ public class PusherService : IPusherService
             };
 
             var result = await _pusher.TriggerAsync(
-                $"user-{usuarioId}",
+                GetChannel(usuarioId),
                 "orden-estado-cambiado",
                 payload
             );
@@ -120,7 +122,7 @@ public class PusherService : IPusherService
             };
 
             var result = await _pusher.TriggerAsync(
-                $"user-{usuarioId}",
+                GetChannel(usuarioId),
                 "pago-actualizado",
                 payload
             );
@@ -153,7 +155,7 @@ public class PusherService : IPusherService
             };
 
             var result = await _pusher.TriggerAsync(
-                $"user-{usuarioId}",
+                GetChannel(usuarioId),
                 "orden-lista-recoger",
                 payload
             );
@@ -184,7 +186,7 @@ public class PusherService : IPusherService
             };
 
             var result = await _pusher.TriggerAsync(
-                $"user-{usuarioId}",
+                GetChannel(usuarioId),
                 "orden-cancelada",
                 payload
             );

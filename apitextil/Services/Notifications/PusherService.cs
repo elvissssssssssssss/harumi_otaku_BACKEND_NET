@@ -44,7 +44,7 @@ public class PusherService : IPusherService
             };
 
             var result = await _pusher.TriggerAsync(
-                $"private-user-{usuarioId}",
+                $"user-{usuarioId}",
                 "orden-creada",
                 payload
             );
@@ -81,7 +81,7 @@ public class PusherService : IPusherService
             };
 
             var result = await _pusher.TriggerAsync(
-                $"private-user-{usuarioId}",
+                $"user-{usuarioId}",
                 "orden-estado-cambiado",
                 payload
             );
@@ -120,7 +120,7 @@ public class PusherService : IPusherService
             };
 
             var result = await _pusher.TriggerAsync(
-                $"private-user-{usuarioId}",
+                $"user-{usuarioId}",
                 "pago-actualizado",
                 payload
             );
@@ -153,7 +153,7 @@ public class PusherService : IPusherService
             };
 
             var result = await _pusher.TriggerAsync(
-                $"private-user-{usuarioId}",
+                $"user-{usuarioId}",
                 "orden-lista-recoger",
                 payload
             );
@@ -184,7 +184,7 @@ public class PusherService : IPusherService
             };
 
             var result = await _pusher.TriggerAsync(
-                $"private-user-{usuarioId}",
+                $"user-{usuarioId}",
                 "orden-cancelada",
                 payload
             );
@@ -197,7 +197,6 @@ public class PusherService : IPusherService
         }
     }
 
-    // ✅ MÉTODO AUXILIAR PARA LOGS
     private void LogResultado(ITriggerResult result, string evento, long usuarioId, long ordenId)
     {
         if (result.StatusCode == System.Net.HttpStatusCode.OK)
@@ -212,7 +211,6 @@ public class PusherService : IPusherService
         }
     }
 
-    // ✅ MÉTODO AUXILIAR PARA MENSAJES
     private static string ObtenerMensajeSegunEstado(string codigoEstado, string nombreEstado)
     {
         return codigoEstado.ToUpperInvariant() switch

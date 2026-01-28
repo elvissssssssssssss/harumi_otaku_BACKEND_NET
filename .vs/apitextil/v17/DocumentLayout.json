@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\services\\notifications\\pusherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\notifications\\pusherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\services\\ordenes\\adminordenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\ordenes\\adminordenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\services\\notifications\\ipusherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\notifications\\ipusherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\services\\notifications\\pusherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\notifications\\pusherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -286,7 +286,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -298,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AdminOrdenService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Ordenes\\AdminOrdenService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\Ordenes\\AdminOrdenService.cs",
@@ -310,29 +310,8 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IPusherService.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Notifications\\IPusherService.cs",
-              "RelativeDocumentMoniker": "apitextil\\Services\\Notifications\\IPusherService.cs",
-              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Notifications\\IPusherService.cs",
-              "RelativeToolTip": "apitextil\\Services\\Notifications\\IPusherService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T07:19:00.676Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PagoService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Pagos\\PagoService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\Pagos\\PagoService.cs",
@@ -340,12 +319,11 @@
               "RelativeToolTip": "apitextil\\Services\\Pagos\\PagoService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:37:00.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:37:00.136Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Program.cs",
               "RelativeDocumentMoniker": "apitextil\\Program.cs",
@@ -353,18 +331,17 @@
               "RelativeToolTip": "apitextil\\Program.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAAAEAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T07:52:08.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T07:52:08.316Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "PusherService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Notifications\\PusherService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\Notifications\\PusherService.cs",
               "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Notifications\\PusherService.cs",
               "RelativeToolTip": "apitextil\\Services\\Notifications\\PusherService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAANYAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAMoAAAAAAAAAAAAUwOMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-28T07:19:26.38Z",
               "EditorCaption": ""
@@ -379,8 +356,7 @@
               "RelativeToolTip": "apitextil\\appsettings.json",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-24T07:52:00.44Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T07:52:00.44Z"
             },
             {
               "$type": "Document",
@@ -392,8 +368,23 @@
               "RelativeToolTip": "apitextil\\Services\\Ordenes\\IAdminOrdenService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T10:16:02.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T10:16:02.431Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IPusherService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Notifications\\IPusherService.cs",
+              "RelativeDocumentMoniker": "apitextil\\Services\\Notifications\\IPusherService.cs",
+              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Notifications\\IPusherService.cs",
+              "RelativeToolTip": "apitextil\\Services\\Notifications\\IPusherService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T07:19:00.676Z"
             },
             {
               "$type": "Document",
@@ -405,8 +396,7 @@
               "RelativeToolTip": "apitextil\\Models\\Entities\\pago\\tblPago.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:46:35.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:46:35.941Z"
             },
             {
               "$type": "Document",
@@ -418,8 +408,7 @@
               "RelativeToolTip": "apitextil\\Data\\EcommerceContext.cs",
               "ViewState": "AgIAAFsBAAAAAAAAAAAIwIgBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:10:07.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:10:07.675Z"
             },
             {
               "$type": "Document",
@@ -431,8 +420,7 @@
               "RelativeToolTip": "apitextil\\CartCleanupService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T05:37:30.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-26T05:37:30.202Z"
             },
             {
               "$type": "Document",
@@ -444,8 +432,7 @@
               "RelativeToolTip": "apitextil\\Controllers\\CategoriasController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:47:21.305Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:47:21.305Z"
             },
             {
               "$type": "Document",
@@ -457,8 +444,7 @@
               "RelativeToolTip": "apitextil\\Controllers\\AdminOrdenesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T10:16:52.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T10:16:52.502Z"
             },
             {
               "$type": "Document",
@@ -470,8 +456,7 @@
               "RelativeToolTip": "apitextil\\Controllers\\OrdenPagosController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:37:21.913Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:37:21.913Z"
             },
             {
               "$type": "Document",
@@ -483,8 +468,7 @@
               "RelativeToolTip": "apitextil\\Controllers\\OrdenesController.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAIBJwCEAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:13:02.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:13:02.675Z"
             },
             {
               "$type": "Document",
@@ -496,8 +480,7 @@
               "RelativeToolTip": "apitextil\\apitextil.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-01-26T05:17:51.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-26T05:17:51.124Z"
             },
             {
               "$type": "Document",
@@ -509,8 +492,7 @@
               "RelativeToolTip": "apitextil\\Controllers\\PagosController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:38:05.584Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:38:05.584Z"
             },
             {
               "$type": "Document",
@@ -522,8 +504,7 @@
               "RelativeToolTip": "apitextil\\Controllers\\ProductosController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:53:34.416Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:53:34.416Z"
             },
             {
               "$type": "Document",
@@ -583,8 +564,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Ordenes\\OrdenDto.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAA9wCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:11:19.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:11:19.5Z"
             },
             {
               "$type": "Document",
@@ -596,8 +576,7 @@
               "RelativeToolTip": "apitextil\\Services\\Ordenes\\OrdenService.cs",
               "ViewState": "AgIAALkAAAAAAAAAAADwv9QAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:12:42.129Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:12:42.129Z"
             },
             {
               "$type": "Document",
@@ -609,8 +588,7 @@
               "RelativeToolTip": "apitextil\\Services\\Pagos\\IPagoService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:36:45.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:36:45.545Z"
             },
             {
               "$type": "Document",
@@ -646,8 +624,7 @@
               "RelativeToolTip": "apitextil\\Models\\Entities\\pago\\tblPagoYapeVoucher.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T10:34:59.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T10:34:59.187Z"
             },
             {
               "$type": "Document",
@@ -659,8 +636,7 @@
               "RelativeToolTip": "apitextil\\Models\\Entities\\pago\\tblPagoValidacion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T07:08:11.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T07:08:11.74Z"
             },
             {
               "$type": "Document",
@@ -672,8 +648,7 @@
               "RelativeToolTip": "apitextil\\Models\\Entities\\Orden\\tblOrdenEstadoHistorial.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T06:01:46.748Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T06:01:46.748Z"
             },
             {
               "$type": "Document",
@@ -685,8 +660,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Pagos\\ValidarPagoDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:36:08.146Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:36:08.146Z"
             },
             {
               "$type": "Document",
@@ -698,8 +672,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Pagos\\PagoDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:35:38.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:35:38.731Z"
             },
             {
               "$type": "Document",
@@ -711,8 +684,7 @@
               "RelativeToolTip": "apitextil\\Controllers\\AdminPagosController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:38:24.012Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:38:24.012Z"
             },
             {
               "$type": "Document",
@@ -724,8 +696,7 @@
               "RelativeToolTip": "apitextil\\Services\\Ordenes\\IOrdenService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:12:20.194Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:12:20.194Z"
             },
             {
               "$type": "Document",
@@ -737,8 +708,7 @@
               "RelativeToolTip": "apitextil\\Models\\Entities\\Orden\\tblOrdenItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T06:01:51.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T06:01:51.132Z"
             },
             {
               "$type": "Document",
@@ -750,8 +720,7 @@
               "RelativeToolTip": "apitextil\\Services\\Carrito\\ICarritoService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:21:31.965Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:21:31.965Z"
             },
             {
               "$type": "Document",
@@ -763,8 +732,7 @@
               "RelativeToolTip": "apitextil\\Services\\Carrito\\CarritoService.cs",
               "ViewState": "AgIAAFwAAAAAAAAAAADwv4gAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:17:10.703Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:17:10.703Z"
             },
             {
               "$type": "Document",
@@ -776,8 +744,7 @@
               "RelativeToolTip": "apitextil\\Controllers\\CarritoController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:17:50.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:17:50.949Z"
             },
             {
               "$type": "Document",
@@ -789,8 +756,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Ordenes\\CreateOrdenDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:11:05.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:11:05.339Z"
             },
             {
               "$type": "Document",
@@ -814,8 +780,7 @@
               "RelativeToolTip": "apitextil\\Services\\Auth\\AuthService.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAowCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T04:39:29.347Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-26T04:39:29.347Z"
             },
             {
               "$type": "Document",
@@ -827,8 +792,7 @@
               "RelativeToolTip": "apitextil\\Services\\Auth\\IAuthService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T04:39:37.041Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-26T04:39:37.041Z"
             },
             {
               "$type": "Document",
@@ -840,8 +804,7 @@
               "RelativeToolTip": "apitextil\\Models\\Entities\\Orden\\tblOrden.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAYwBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:40:40.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:40:40.015Z"
             },
             {
               "$type": "Document",
@@ -853,8 +816,7 @@
               "RelativeToolTip": "apitextil\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:41:11.968Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:41:11.968Z"
             },
             {
               "$type": "Document",
@@ -866,8 +828,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Categorias\\CreateCategoriaDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:44:49.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:44:49.829Z"
             },
             {
               "$type": "Document",
@@ -879,8 +840,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Ordenes\\AdminCambiarEstadoOrdenDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T10:15:33.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T10:15:33.204Z"
             },
             {
               "$type": "Document",
@@ -892,8 +852,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Pagos\\UploadVoucherForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:35:54.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:35:54.307Z"
             },
             {
               "$type": "Document",
@@ -905,8 +864,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Pagos\\IniciarPagoYapeDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:35:25.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:35:25.664Z"
             },
             {
               "$type": "Document",
@@ -918,8 +876,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Ordenes\\OrdenEstadoHistorialDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:11:34.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:11:34.601Z"
             },
             {
               "$type": "Document",
@@ -931,8 +888,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Productos\\SetProductoActivoDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:05:25.115Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:05:25.115Z"
             },
             {
               "$type": "Document",
@@ -944,8 +900,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Productos\\ProductoDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:04:56.685Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:04:56.685Z"
             },
             {
               "$type": "Document",
@@ -957,8 +912,7 @@
               "RelativeToolTip": "apitextil\\Services\\Productos\\IProductoService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:52:55.412Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:52:55.412Z"
             },
             {
               "$type": "Document",
@@ -970,8 +924,7 @@
               "RelativeToolTip": "apitextil\\Services\\Productos\\ProductoService.cs",
               "ViewState": "AgIAAHUAAAAAAAAAAAAIwJkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:53:11.08Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:53:11.08Z"
             },
             {
               "$type": "Document",
@@ -983,8 +936,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Productos\\UpdateProductoForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:04:34.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:04:34.568Z"
             },
             {
               "$type": "Document",
@@ -996,8 +948,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Productos\\CreateProductoForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T09:04:16.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T09:04:16.97Z"
             },
             {
               "$type": "Document",
@@ -1009,8 +960,7 @@
               "RelativeToolTip": "apitextil\\Utils\\DatabaseConnectionTester.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T07:57:19.843Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T07:57:19.843Z"
             },
             {
               "$type": "Document",
@@ -1022,8 +972,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Categorias\\UpdateCategoriaDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:45:06.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:45:06.246Z"
             },
             {
               "$type": "Document",
@@ -1035,8 +984,7 @@
               "RelativeToolTip": "apitextil\\Services\\Categorias\\CategoriaService.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAIwFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:46:48.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:46:48.054Z"
             },
             {
               "$type": "Document",
@@ -1048,8 +996,7 @@
               "RelativeToolTip": "apitextil\\Services\\Categorias\\ICategoriaService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:46:29.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:46:29.615Z"
             },
             {
               "$type": "Document",
@@ -1061,8 +1008,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Categorias\\CategoriaDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:45:34.056Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:45:34.056Z"
             },
             {
               "$type": "Document",
@@ -1074,8 +1020,7 @@
               "RelativeToolTip": "apitextil\\Models\\Entities\\Carrito\\tblCarrito.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:40:29.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:40:29.535Z"
             },
             {
               "$type": "Document",
@@ -1087,8 +1032,7 @@
               "RelativeToolTip": "apitextil\\Models\\Entities\\Carrito\\tblCarritoItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:40:27.176Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:40:27.176Z"
             },
             {
               "$type": "Document",
@@ -1100,8 +1044,7 @@
               "RelativeToolTip": "apitextil\\Models\\Entities\\Producto\\tblCategoria.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:36:47.24Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:36:47.24Z"
             },
             {
               "$type": "Document",
@@ -1113,8 +1056,7 @@
               "RelativeToolTip": "apitextil\\Models\\Entities\\Producto\\tblProducto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:36:43.727Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:36:43.727Z"
             },
             {
               "$type": "Document",
@@ -1126,8 +1068,7 @@
               "RelativeToolTip": "apitextil\\Models\\Entities\\Usuario\\tblEstadoOrden.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:36:35.624Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:36:35.624Z"
             },
             {
               "$type": "Document",
@@ -1139,8 +1080,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Carrito\\CarritoActualDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:16:33.822Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:16:33.822Z"
             },
             {
               "$type": "Document",
@@ -1152,8 +1092,7 @@
               "RelativeToolTip": "apitextil\\Models\\Entities\\Usuario\\tblUsuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T07:58:25.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T07:58:25.307Z"
             },
             {
               "$type": "Document",
@@ -1165,8 +1104,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Carrito\\UpdateCarritoItemDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:16:06.554Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:16:06.554Z"
             },
             {
               "$type": "Document",
@@ -1178,8 +1116,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Carrito\\AddCarritoItemDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:15:41.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:15:41.106Z"
             },
             {
               "$type": "Document",
@@ -1191,8 +1128,11 @@
               "RelativeToolTip": "apitextil\\apitextil.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-24T07:50:21.695Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T07:50:21.695Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }

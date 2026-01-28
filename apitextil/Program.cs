@@ -1,3 +1,4 @@
+using Apitextil.Services.Notifications;
 using Apitextil.Data;
 using Apitextil.Services.Auth;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -5,7 +6,11 @@ using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+
+
 using System.Text;
+
+
 using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -50,6 +55,8 @@ builder.Services.AddScoped<Apitextil.Services.Productos.IProductoService, Apitex
 builder.Services.AddScoped<Apitextil.Services.Ordenes.IOrdenService, Apitextil.Services.Ordenes.OrdenService>();
 builder.Services.AddScoped<Apitextil.Services.Pagos.IPagoService, Apitextil.Services.Pagos.PagoService>();
 builder.Services.AddScoped<Apitextil.Services.Ordenes.IAdminOrdenService, Apitextil.Services.Ordenes.AdminOrdenService>();
+builder.Services.AddSingleton<IPusherService, PusherService>();
+
 
 
 // JWT

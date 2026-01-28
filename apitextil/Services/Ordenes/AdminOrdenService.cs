@@ -1,6 +1,9 @@
-﻿using Apitextil.Data;
+﻿using Apitextil.Services.Notifications;  // ✅ AL INICIO DEL ARCHIVO
+using Apitextil.Data;
 using Apitextil.DTOs.Ordenes;
 using Apitextil.Models.Entities;
+
+
 using Microsoft.EntityFrameworkCore;
 
 namespace Apitextil.Services.Ordenes;
@@ -8,7 +11,13 @@ namespace Apitextil.Services.Ordenes;
 public class AdminOrdenService : IAdminOrdenService
 {
     private readonly EcommerceContext _db;
-    public AdminOrdenService(EcommerceContext db) => _db = db;
+    private readonly IPusherService _pusherService;
+
+    public AdminOrdenService(EcommerceContext db, IPusherService pusherService)
+    {
+        _db = db;
+        _pusherService = pusherService;
+    }
 
     public async Task CambiarEstadoAsync(long adminUsuarioId, long ordenId, AdminCambiarEstadoOrdenDto dto)
     {
@@ -33,7 +42,7 @@ public class AdminOrdenService : IAdminOrdenService
         if (!EsTransicionValida(actual.Codigo, nuevo.Codigo))
             throw new InvalidOperationException($"Transición no permitida: {actual.Codigo} -> {nuevo.Codigo}");
 
-        await using var tx = await _db.Database.BeginTransactionAsync(); // atomicidad [web:328]
+        await using var tx = await _db.Database.BeginTransactionAsync();
 
         orden.EstadoActualId = nuevo.Id;
         orden.UpdatedAt = DateTime.UtcNow;
@@ -49,6 +58,38 @@ public class AdminOrdenService : IAdminOrdenService
 
         await _db.SaveChangesAsync();
         await tx.CommitAsync();
+
+        // 🔥 DISPARAR EVENTO PUSHER DESPUÉS DE GUARDAR EN BD
+        // 🔥 DISPARAR EVENTO PUSHER DESPUÉS DE GUARDAR EN BD
+        await _pusherService.SendOrdenEstadoCambiadoAsync(
+            ordenId: orden.Id,
+            usuarioId: orden.UsuarioId,
+            nuevoEstadoId: nuevo.Id,              // ✅ Pasamos el Id (long)
+            nuevoEstadoCodigo: nuevo.Codigo,
+            nuevoEstadoNombre: nuevo.Nombre,
+            comentario: dto.Comentario
+        );
+
+        // Si el estado es "LISTO", enviar notificación especial
+        if (nuevo.Codigo.ToUpperInvariant() == "LISTO")
+        {
+            await _pusherService.SendOrdenListaParaRecogerAsync(
+                orden.Id,
+                orden.UsuarioId,
+                orden.PickupAt
+            );
+        }
+
+        // Si el estado es "CANCELADO", enviar notificación especial
+        if (nuevo.Codigo.ToUpperInvariant() == "CANCELADO")
+        {
+            await _pusherService.SendOrdenCanceladaAsync(
+                orden.Id,
+                orden.UsuarioId,
+                dto.Comentario
+            );
+        }
+
     }
 
     private static bool EsTransicionValida(string actual, string nuevo)

@@ -1,6 +1,14 @@
-﻿using Apitextil.Data;
+﻿using Apitextil.Services.Notifications;  // ✅ AL INICIO DEL ARCHIVO
+using Apitextil.Data;
 using Apitextil.DTOs.Pagos;
 using Apitextil.Models.Entities;
+using Microsoft.AspNetCore.Http;
+
+
+
+
+
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 
 namespace Apitextil.Services.Pagos;
@@ -9,11 +17,14 @@ public class PagoService : IPagoService
 {
     private readonly EcommerceContext _db;
     private readonly IWebHostEnvironment _env;
+    private readonly IPusherService _pusherService;  // ✅ NOMBRE COMPLETO
 
-    public PagoService(EcommerceContext db, IWebHostEnvironment env)
+
+    public PagoService(EcommerceContext db, IWebHostEnvironment env, IPusherService pusherService)
     {
         _db = db;
         _env = env;
+        _pusherService = pusherService;
     }
 
     public async Task<PagoDto> IniciarYapeAsync(long usuarioId, long ordenId, IniciarPagoYapeDto dto)
@@ -102,6 +113,15 @@ public class PagoService : IPagoService
 
         await _db.SaveChangesAsync();
 
+        // 🔥 NOTIFICAR AL USUARIO QUE SU VOUCHER ESTÁ EN REVISIÓN
+        await _pusherService.SendPagoActualizadoAsync(
+            pagoId: pago.Id,
+            ordenId: pago.OrdenId,
+            usuarioId: orden.UsuarioId,
+            nuevoEstado: "EN_REVISION",
+            metodoPago: pago.Metodo
+        );
+
         return new PagoDto
         {
             Id = pago.Id,
@@ -115,12 +135,17 @@ public class PagoService : IPagoService
 
     public async Task<PagoDto> ValidarAsync(long adminUsuarioId, long pagoId, ValidarPagoDto dto)
     {
-        var pago = await _db.tblpagos.FirstOrDefaultAsync(p => p.Id == pagoId);
+        var pago = await _db.tblpagos
+            .Include(p => p.Orden) // 🔥 INCLUIR ORDEN PARA OBTENER USUARIO_ID
+            .FirstOrDefaultAsync(p => p.Id == pagoId);
+
         if (pago == null) throw new InvalidOperationException("Pago no encontrado.");
 
         var resultado = (dto.Resultado ?? "").Trim().ToUpperInvariant();
         if (resultado != "CONFIRMADO" && resultado != "RECHAZADO")
             throw new InvalidOperationException("Resultado inválido.");
+
+        await using var tx = await _db.Database.BeginTransactionAsync();
 
         _db.tblpago_validacion.Add(new tblPagoValidacion
         {
@@ -134,7 +159,40 @@ public class PagoService : IPagoService
         pago.Estado = resultado == "CONFIRMADO" ? "CONFIRMADO" : "RECHAZADO";
         pago.UpdatedAt = DateTime.UtcNow;
 
+        // 🔥 SI CONFIRMADO, CAMBIAR ORDEN A ESTADO "PREPARANDO"
+        if (resultado == "CONFIRMADO")
+        {
+            var estadoPreparando = await _db.tblestados_orden.FirstOrDefaultAsync(e => e.Codigo == "PREPARANDO");
+            if (estadoPreparando != null && pago.Orden != null)
+            {
+                pago.Orden.EstadoActualId = estadoPreparando.Id;
+                pago.Orden.UpdatedAt = DateTime.UtcNow;
+
+                _db.tblorden_estado_historial.Add(new tblOrdenEstadoHistorial
+                {
+                    OrdenId = pago.Orden.Id,
+                    EstadoId = estadoPreparando.Id,
+                    CambiadoPorUsuarioId = adminUsuarioId,
+                    Comentario = "Pago confirmado - orden movida a preparación",
+                    FechaCambio = DateTime.UtcNow
+                });
+            }
+        }
+
         await _db.SaveChangesAsync();
+        await tx.CommitAsync();
+
+        // 🔥 DISPARAR EVENTO PUSHER DESPUÉS DE GUARDAR EN BD
+        if (pago.Orden != null)
+        {
+            await _pusherService.SendPagoActualizadoAsync(
+                pagoId: pago.Id,
+                ordenId: pago.OrdenId,
+                usuarioId: pago.Orden.UsuarioId,
+                nuevoEstado: pago.Estado,
+                metodoPago: pago.Metodo
+            );
+        }
 
         var yape = await _db.tblpago_yape_voucher.FirstOrDefaultAsync(x => x.PagoId == pagoId);
 

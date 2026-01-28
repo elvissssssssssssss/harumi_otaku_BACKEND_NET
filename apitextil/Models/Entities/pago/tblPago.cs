@@ -10,7 +10,7 @@ public class tblPago
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
 
-    public tblOrden Orden { get; set; } = default!;
+    public tblOrden? Orden { get; set; }  // ✅ ESTA LÍNEA ES CLAVE
 
     public tblPagoYapeVoucher? PagoYapeVoucher { get; set; }  // <- SOLO ESTA
     public tblPagoValidacion? Validacion { get; set; }

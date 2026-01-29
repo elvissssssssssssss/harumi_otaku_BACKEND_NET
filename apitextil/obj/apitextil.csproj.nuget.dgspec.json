@@ -90,7 +90,7 @@
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[7.1.2, )"
+              "version": "[8.15.0, )"
             },
             "mercadopago-sdk": {
               "target": "Package",

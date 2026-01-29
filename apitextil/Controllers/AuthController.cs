@@ -22,11 +22,11 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] AuthLoginDto dto)
     {
-        var userId = await _service.LoginAsync(dto);
-        if (userId == null) return Unauthorized(new { message = "Credenciales inválidas" });
+        var response = await _service.LoginAsync(dto);
+        if (response == null)
+            return Unauthorized(new { message = "Credenciales inválidas" });
 
-        // Luego aquí devuelves JWT. Por ahora devolvemos el userId.
-        return Ok(new { userId });
+        return Ok(response);
     }
 
     [HttpGet("me")]

@@ -302,7 +302,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -311,19 +311,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:905569592:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Auth\\AuthService.cs",
-              "RelativeDocumentMoniker": "apitextil\\Services\\Auth\\AuthService.cs",
-              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Auth\\AuthService.cs",
-              "RelativeToolTip": "apitextil\\Services\\Auth\\AuthService.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T04:39:29.347Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -340,19 +327,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CartCleanupService.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\CartCleanupService.cs",
-              "RelativeDocumentMoniker": "apitextil\\CartCleanupService.cs",
-              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\CartCleanupService.cs",
-              "RelativeToolTip": "apitextil\\CartCleanupService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T05:37:30.202Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\appsettings.json",
@@ -361,8 +335,7 @@
               "RelativeToolTip": "apitextil\\appsettings.json",
               "ViewState": "AgIAABMAAAAAAAAAAAAAADgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-24T07:52:00.44Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T07:52:00.44Z"
             },
             {
               "$type": "Document",
@@ -374,8 +347,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Auth\\AuthResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T00:00:47.672Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T00:00:47.672Z"
             },
             {
               "$type": "Document",
@@ -387,12 +359,7 @@
               "RelativeToolTip": "apitextil\\Services\\Auth\\IAuthService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T04:39:37.041Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "WhenOpened": "2026-01-26T04:39:37.041Z"
             },
             {
               "$type": "Document",
@@ -404,8 +371,35 @@
               "RelativeToolTip": "apitextil\\Controllers\\CategoriasController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:47:21.305Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T08:47:21.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Auth\\AuthService.cs",
+              "RelativeDocumentMoniker": "apitextil\\Services\\Auth\\AuthService.cs",
+              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Auth\\AuthService.cs",
+              "RelativeToolTip": "apitextil\\Services\\Auth\\AuthService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T04:39:29.347Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CartCleanupService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\CartCleanupService.cs",
+              "RelativeDocumentMoniker": "apitextil\\CartCleanupService.cs",
+              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\CartCleanupService.cs",
+              "RelativeToolTip": "apitextil\\CartCleanupService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T05:37:30.202Z"
             },
             {
               "$type": "Document",
@@ -417,8 +411,7 @@
               "RelativeToolTip": "apitextil\\Controllers\\AdminOrdenesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T10:16:52.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T10:16:52.502Z"
             },
             {
               "$type": "Document",
@@ -430,8 +423,7 @@
               "RelativeToolTip": "apitextil\\DTOs\\Auth\\AuthRegisterDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T23:58:25.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T23:58:25.541Z"
             },
             {
               "$type": "Document",
@@ -443,8 +435,7 @@
               "RelativeToolTip": "apitextil\\Program.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T07:52:08.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-24T07:52:08.316Z"
             },
             {
               "$type": "Document",

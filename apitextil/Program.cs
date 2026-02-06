@@ -110,9 +110,16 @@ builder.Services.AddSwaggerGen(c =>
 var app = builder.Build();
 
 // Asegurar wwwroot + carpeta vouchers
+// Asegurar wwwroot + estructura de carpetas
 var webRoot = app.Environment.WebRootPath ?? Path.Combine(app.Environment.ContentRootPath, "wwwroot");
-Directory.CreateDirectory(webRoot);
-Directory.CreateDirectory(Path.Combine(webRoot, "uploads", "vouchers"));
+if (!Directory.Exists(webRoot)) Directory.CreateDirectory(webRoot);
+
+// Crear carpetas de productos y vouchers si no existen
+string productosPath = Path.Combine(webRoot, "uploads", "productos");
+string vouchersPath = Path.Combine(webRoot, "uploads", "vouchers");
+
+if (!Directory.Exists(productosPath)) Directory.CreateDirectory(productosPath);
+if (!Directory.Exists(vouchersPath)) Directory.CreateDirectory(vouchersPath);
 
 // Pipeline
 if (app.Environment.IsDevelopment())

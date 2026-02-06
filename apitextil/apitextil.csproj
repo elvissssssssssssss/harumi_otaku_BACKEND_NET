@@ -28,6 +28,7 @@
 
 	<ItemGroup>
 	  <Folder Include="DTOs\NewFolder\" />
+	  <Folder Include="wwwroot\uploads\productos\" />
 	</ItemGroup>
 
 </Project>

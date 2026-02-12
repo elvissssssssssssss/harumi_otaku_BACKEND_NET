@@ -167,6 +167,18 @@
         }
       }
     },
+    "/api/auth/list": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/auth/me": {
       "get": {
         "tags": [

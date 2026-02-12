@@ -28,7 +28,12 @@ public class AuthController : ControllerBase
 
         return Ok(response);
     }
-
+    [HttpGet("list")]
+    public async Task<IActionResult> GetUsers()
+    {
+        var users = await _service.GetAllUsersAsync();
+        return Ok(users);
+    }
     [HttpGet("me")]
     public IActionResult Me()
     {

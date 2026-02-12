@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\services\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\services\\auth\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\auth\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\dtos\\auth\\userresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\auth\\userresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\models\\entities\\usuario\\tblestadoorden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\models\\entities\\usuario\\tblestadoorden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\models\\entities\\usuario\\tblusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\models\\entities\\usuario\\tblusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\dtos\\auth\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\auth\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\dtos\\auth\\authregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\auth\\authregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\services\\productos\\iproductoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\productos\\iproductoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -35,22 +67,6 @@
       "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\controllers\\pagoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\services\\auth\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\auth\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\dtos\\auth\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\auth\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\services\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\cartcleanupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\cartcleanupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -61,10 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\controllers\\adminordenescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\controllers\\adminordenescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\dtos\\auth\\authregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\auth\\authregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\services\\notifications\\ipusherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -251,14 +263,6 @@
       "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\models\\entities\\producto\\tblproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\models\\entities\\usuario\\tblestadoorden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\models\\entities\\usuario\\tblestadoorden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\models\\entities\\usuario\\tblusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\models\\entities\\usuario\\tblusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\videos\\harumi\\harumi_otaku_backend_net\\apitextil\\dtos\\carrito\\carritoactualdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\carrito\\carritoactualdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -293,88 +297,133 @@
               "Name": "ST:905569592:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\appsettings.json",
-              "RelativeDocumentMoniker": "apitextil\\appsettings.json",
-              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\appsettings.json",
-              "RelativeToolTip": "apitextil\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-24T07:52:00.44Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "apitextil.http",
-              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\apitextil.http",
-              "RelativeDocumentMoniker": "apitextil\\apitextil.http",
-              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\apitextil.http",
-              "RelativeToolTip": "apitextil\\apitextil.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-01-26T05:17:51.124Z",
+              "Title": "UserResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Auth\\UserResponseDto.cs",
+              "RelativeDocumentMoniker": "apitextil\\DTOs\\Auth\\UserResponseDto.cs",
+              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Auth\\UserResponseDto.cs",
+              "RelativeToolTip": "apitextil\\DTOs\\Auth\\UserResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T05:36:39.508Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Program.cs",
-              "RelativeDocumentMoniker": "apitextil\\Program.cs",
-              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Program.cs",
-              "RelativeToolTip": "apitextil\\Program.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAuwHkAAABNAAAAAAAAAA==",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "apitextil\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "apitextil\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAowCMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T07:52:08.316Z",
+              "WhenOpened": "2026-01-24T08:41:11.968Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "57e692d381784895863da76cc12c31b8.png -  [Espa\u00F1ol (M\u00E9xico)] - PNG [206x615, 32 bits, PNG]",
-              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\wwwroot\\uploads\\vouchers\\57e692d381784895863da76cc12c31b8.png",
-              "RelativeDocumentMoniker": "apitextil\\wwwroot\\uploads\\vouchers\\57e692d381784895863da76cc12c31b8.png",
-              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\wwwroot\\uploads\\vouchers\\57e692d381784895863da76cc12c31b8.png -  [Espa\u00F1ol (M\u00E9xico)] - PNG [206x615, 32 bits, PNG]",
-              "RelativeToolTip": "apitextil\\wwwroot\\uploads\\vouchers\\57e692d381784895863da76cc12c31b8.png -  [Espa\u00F1ol (M\u00E9xico)] - PNG [206x615, 32 bits, PNG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2026-02-03T03:51:15.819Z",
-              "EditorCaption": " -  [Espa\u00F1ol (M\u00E9xico)] - PNG [206x615, 32 bits, PNG]"
+              "Title": "tblUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Models\\Entities\\Usuario\\tblUsuario.cs",
+              "RelativeDocumentMoniker": "apitextil\\Models\\Entities\\Usuario\\tblUsuario.cs",
+              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Models\\Entities\\Usuario\\tblUsuario.cs",
+              "RelativeToolTip": "apitextil\\Models\\Entities\\Usuario\\tblUsuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-24T07:58:25.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "tblEstadoOrden.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Models\\Entities\\Usuario\\tblEstadoOrden.cs",
+              "RelativeDocumentMoniker": "apitextil\\Models\\Entities\\Usuario\\tblEstadoOrden.cs",
+              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Models\\Entities\\Usuario\\tblEstadoOrden.cs",
+              "RelativeToolTip": "apitextil\\Models\\Entities\\Usuario\\tblEstadoOrden.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-24T08:36:35.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Auth\\IAuthService.cs",
+              "RelativeDocumentMoniker": "apitextil\\Services\\Auth\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Auth\\IAuthService.cs",
+              "RelativeToolTip": "apitextil\\Services\\Auth\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T04:39:37.041Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Auth\\AuthService.cs",
+              "RelativeDocumentMoniker": "apitextil\\Services\\Auth\\AuthService.cs",
+              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Auth\\AuthService.cs",
+              "RelativeToolTip": "apitextil\\Services\\Auth\\AuthService.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAYwGYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T04:39:29.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Auth\\AuthResponseDto.cs",
+              "RelativeDocumentMoniker": "apitextil\\DTOs\\Auth\\AuthResponseDto.cs",
+              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Auth\\AuthResponseDto.cs",
+              "RelativeToolTip": "apitextil\\DTOs\\Auth\\AuthResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T00:00:47.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthRegisterDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Auth\\AuthRegisterDto.cs",
+              "RelativeDocumentMoniker": "apitextil\\DTOs\\Auth\\AuthRegisterDto.cs",
+              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Auth\\AuthRegisterDto.cs",
+              "RelativeToolTip": "apitextil\\DTOs\\Auth\\AuthRegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T23:58:25.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "IProductoService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Productos\\IProductoService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\Productos\\IProductoService.cs",
               "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Productos\\IProductoService.cs",
               "RelativeToolTip": "apitextil\\Services\\Productos\\IProductoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-24T08:52:55.412Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "a7f8a62dfe3542a9b9c5e75621449c80.jpg -  [Espa\u00F1ol (M\u00E9xico)] - Bitmap [1300x1300, 24 bits, JPG]",
-              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\wwwroot\\uploads\\vouchers\\a7f8a62dfe3542a9b9c5e75621449c80.jpg",
-              "RelativeDocumentMoniker": "apitextil\\wwwroot\\uploads\\vouchers\\a7f8a62dfe3542a9b9c5e75621449c80.jpg",
-              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\wwwroot\\uploads\\vouchers\\a7f8a62dfe3542a9b9c5e75621449c80.jpg -  [Espa\u00F1ol (M\u00E9xico)] - Bitmap [1300x1300, 24 bits, JPG]",
-              "RelativeToolTip": "apitextil\\wwwroot\\uploads\\vouchers\\a7f8a62dfe3542a9b9c5e75621449c80.jpg -  [Espa\u00F1ol (M\u00E9xico)] - Bitmap [1300x1300, 24 bits, JPG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2026-02-03T03:51:14.637Z",
-              "EditorCaption": " -  [Espa\u00F1ol (M\u00E9xico)] - Bitmap [1300x1300, 24 bits, JPG]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "ProductosController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Controllers\\ProductosController.cs",
               "RelativeDocumentMoniker": "apitextil\\Controllers\\ProductosController.cs",
@@ -386,31 +435,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "apitextil\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "apitextil\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAowCUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:41:11.968Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Auth\\AuthService.cs",
-              "RelativeDocumentMoniker": "apitextil\\Services\\Auth\\AuthService.cs",
-              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Auth\\AuthService.cs",
-              "RelativeToolTip": "apitextil\\Services\\Auth\\AuthService.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T04:39:29.347Z"
+              "DocumentIndex": 14,
+              "Title": "a7f8a62dfe3542a9b9c5e75621449c80.jpg -  [Espa\u00F1ol (M\u00E9xico)] - Bitmap [1300x1300, 24 bits, JPG]",
+              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\wwwroot\\uploads\\vouchers\\a7f8a62dfe3542a9b9c5e75621449c80.jpg",
+              "RelativeDocumentMoniker": "apitextil\\wwwroot\\uploads\\vouchers\\a7f8a62dfe3542a9b9c5e75621449c80.jpg",
+              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\wwwroot\\uploads\\vouchers\\a7f8a62dfe3542a9b9c5e75621449c80.jpg -  [Espa\u00F1ol (M\u00E9xico)] - Bitmap [1300x1300, 24 bits, JPG]",
+              "RelativeToolTip": "apitextil\\wwwroot\\uploads\\vouchers\\a7f8a62dfe3542a9b9c5e75621449c80.jpg -  [Espa\u00F1ol (M\u00E9xico)] - Bitmap [1300x1300, 24 bits, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-02-03T03:51:14.637Z",
+              "EditorCaption": " -  [Espa\u00F1ol (M\u00E9xico)] - Bitmap [1300x1300, 24 bits, JPG]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
+              "Title": "57e692d381784895863da76cc12c31b8.png -  [Espa\u00F1ol (M\u00E9xico)] - PNG [206x615, 32 bits, PNG]",
+              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\wwwroot\\uploads\\vouchers\\57e692d381784895863da76cc12c31b8.png",
+              "RelativeDocumentMoniker": "apitextil\\wwwroot\\uploads\\vouchers\\57e692d381784895863da76cc12c31b8.png",
+              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\wwwroot\\uploads\\vouchers\\57e692d381784895863da76cc12c31b8.png -  [Espa\u00F1ol (M\u00E9xico)] - PNG [206x615, 32 bits, PNG]",
+              "RelativeToolTip": "apitextil\\wwwroot\\uploads\\vouchers\\57e692d381784895863da76cc12c31b8.png -  [Espa\u00F1ol (M\u00E9xico)] - PNG [206x615, 32 bits, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-02-03T03:51:15.819Z",
+              "EditorCaption": " -  [Espa\u00F1ol (M\u00E9xico)] - PNG [206x615, 32 bits, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Program.cs",
+              "RelativeDocumentMoniker": "apitextil\\Program.cs",
+              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Program.cs",
+              "RelativeToolTip": "apitextil\\Program.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAuwHkAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-24T07:52:08.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "apitextil.http",
+              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\apitextil.http",
+              "RelativeDocumentMoniker": "apitextil\\apitextil.http",
+              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\apitextil.http",
+              "RelativeToolTip": "apitextil\\apitextil.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-01-26T05:17:51.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\appsettings.json",
+              "RelativeDocumentMoniker": "apitextil\\appsettings.json",
+              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\appsettings.json",
+              "RelativeToolTip": "apitextil\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-24T07:52:00.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "CategoriasController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Controllers\\CategoriasController.cs",
               "RelativeDocumentMoniker": "apitextil\\Controllers\\CategoriasController.cs",
@@ -422,19 +507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Auth\\IAuthService.cs",
-              "RelativeDocumentMoniker": "apitextil\\Services\\Auth\\IAuthService.cs",
-              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Auth\\IAuthService.cs",
-              "RelativeToolTip": "apitextil\\Services\\Auth\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T04:39:37.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "PagosController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Controllers\\PagosController.cs",
               "RelativeDocumentMoniker": "apitextil\\Controllers\\PagosController.cs",
@@ -446,19 +519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AuthResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Auth\\AuthResponseDto.cs",
-              "RelativeDocumentMoniker": "apitextil\\DTOs\\Auth\\AuthResponseDto.cs",
-              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Auth\\AuthResponseDto.cs",
-              "RelativeToolTip": "apitextil\\DTOs\\Auth\\AuthResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T00:00:47.672Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "CartCleanupService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\CartCleanupService.cs",
               "RelativeDocumentMoniker": "apitextil\\CartCleanupService.cs",
@@ -470,7 +531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "AdminOrdenesController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Controllers\\AdminOrdenesController.cs",
               "RelativeDocumentMoniker": "apitextil\\Controllers\\AdminOrdenesController.cs",
@@ -482,19 +543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AuthRegisterDto.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Auth\\AuthRegisterDto.cs",
-              "RelativeDocumentMoniker": "apitextil\\DTOs\\Auth\\AuthRegisterDto.cs",
-              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Auth\\AuthRegisterDto.cs",
-              "RelativeToolTip": "apitextil\\DTOs\\Auth\\AuthRegisterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T23:58:25.541Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "AdminOrdenService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Ordenes\\AdminOrdenService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\Ordenes\\AdminOrdenService.cs",
@@ -506,7 +555,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "OrdenService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Ordenes\\OrdenService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\Ordenes\\OrdenService.cs",
@@ -518,7 +567,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "IOrdenService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Ordenes\\IOrdenService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\Ordenes\\IOrdenService.cs",
@@ -530,7 +579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "IPusherService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Notifications\\IPusherService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\Notifications\\IPusherService.cs",
@@ -542,7 +591,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "PusherService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Notifications\\PusherService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\Notifications\\PusherService.cs",
@@ -554,7 +603,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "OrderNotificationService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Ordenes\\OrderNotificationService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\Ordenes\\OrderNotificationService.cs",
@@ -566,7 +615,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "OrdenPagosController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Controllers\\OrdenPagosController.cs",
               "RelativeDocumentMoniker": "apitextil\\Controllers\\OrdenPagosController.cs",
@@ -578,7 +627,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "OrdenesController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Controllers\\OrdenesController.cs",
               "RelativeDocumentMoniker": "apitextil\\Controllers\\OrdenesController.cs",
@@ -590,7 +639,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "PusherAuthController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Controllers\\PusherAuthController.cs",
               "RelativeDocumentMoniker": "apitextil\\Controllers\\PusherAuthController.cs",
@@ -602,7 +651,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "PagoService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Pagos\\PagoService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\Pagos\\PagoService.cs",
@@ -614,7 +663,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "IAdminOrdenService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Ordenes\\IAdminOrdenService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\Ordenes\\IAdminOrdenService.cs",
@@ -626,7 +675,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "tblPago.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Models\\Entities\\pago\\tblPago.cs",
               "RelativeDocumentMoniker": "apitextil\\Models\\Entities\\pago\\tblPago.cs",
@@ -638,7 +687,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "EcommerceContext.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Data\\EcommerceContext.cs",
               "RelativeDocumentMoniker": "apitextil\\Data\\EcommerceContext.cs",
@@ -650,7 +699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "OrdenDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Ordenes\\OrdenDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Ordenes\\OrdenDto.cs",
@@ -662,7 +711,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "IPagoService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Pagos\\IPagoService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\Pagos\\IPagoService.cs",
@@ -674,7 +723,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "tblPagoYapeVoucher.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Models\\Entities\\pago\\tblPagoYapeVoucher.cs",
               "RelativeDocumentMoniker": "apitextil\\Models\\Entities\\pago\\tblPagoYapeVoucher.cs",
@@ -686,7 +735,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "tblPagoValidacion.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Models\\Entities\\pago\\tblPagoValidacion.cs",
               "RelativeDocumentMoniker": "apitextil\\Models\\Entities\\pago\\tblPagoValidacion.cs",
@@ -698,7 +747,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "tblOrdenEstadoHistorial.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Models\\Entities\\Orden\\tblOrdenEstadoHistorial.cs",
               "RelativeDocumentMoniker": "apitextil\\Models\\Entities\\Orden\\tblOrdenEstadoHistorial.cs",
@@ -710,7 +759,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "ValidarPagoDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Pagos\\ValidarPagoDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Pagos\\ValidarPagoDto.cs",
@@ -722,7 +771,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "PagoDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Pagos\\PagoDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Pagos\\PagoDto.cs",
@@ -734,7 +783,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "AdminPagosController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Controllers\\AdminPagosController.cs",
               "RelativeDocumentMoniker": "apitextil\\Controllers\\AdminPagosController.cs",
@@ -746,7 +795,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "tblOrdenItem.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Models\\Entities\\Orden\\tblOrdenItem.cs",
               "RelativeDocumentMoniker": "apitextil\\Models\\Entities\\Orden\\tblOrdenItem.cs",
@@ -758,7 +807,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "ICarritoService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Carrito\\ICarritoService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\Carrito\\ICarritoService.cs",
@@ -770,7 +819,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "CarritoService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Carrito\\CarritoService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\Carrito\\CarritoService.cs",
@@ -782,7 +831,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "CarritoController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Controllers\\CarritoController.cs",
               "RelativeDocumentMoniker": "apitextil\\Controllers\\CarritoController.cs",
@@ -794,7 +843,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "CreateOrdenDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Ordenes\\CreateOrdenDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Ordenes\\CreateOrdenDto.cs",
@@ -806,7 +855,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "tblOrden.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Models\\Entities\\Orden\\tblOrden.cs",
               "RelativeDocumentMoniker": "apitextil\\Models\\Entities\\Orden\\tblOrden.cs",
@@ -818,7 +867,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "CreateCategoriaDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Categorias\\CreateCategoriaDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Categorias\\CreateCategoriaDto.cs",
@@ -830,7 +879,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "AdminCambiarEstadoOrdenDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Ordenes\\AdminCambiarEstadoOrdenDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Ordenes\\AdminCambiarEstadoOrdenDto.cs",
@@ -842,7 +891,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "UploadVoucherForm.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Pagos\\UploadVoucherForm.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Pagos\\UploadVoucherForm.cs",
@@ -854,7 +903,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "IniciarPagoYapeDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Pagos\\IniciarPagoYapeDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Pagos\\IniciarPagoYapeDto.cs",
@@ -866,7 +915,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "OrdenEstadoHistorialDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Ordenes\\OrdenEstadoHistorialDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Ordenes\\OrdenEstadoHistorialDto.cs",
@@ -878,7 +927,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 52,
               "Title": "SetProductoActivoDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Productos\\SetProductoActivoDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Productos\\SetProductoActivoDto.cs",
@@ -890,7 +939,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 53,
               "Title": "ProductoDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Productos\\ProductoDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Productos\\ProductoDto.cs",
@@ -902,7 +951,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 51,
               "Title": "ProductoService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Productos\\ProductoService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\Productos\\ProductoService.cs",
@@ -914,7 +963,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 54,
               "Title": "UpdateProductoForm.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Productos\\UpdateProductoForm.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Productos\\UpdateProductoForm.cs",
@@ -926,7 +975,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 55,
               "Title": "CreateProductoForm.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Productos\\CreateProductoForm.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Productos\\CreateProductoForm.cs",
@@ -938,7 +987,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 57,
               "Title": "DatabaseConnectionTester.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Utils\\DatabaseConnectionTester.cs",
               "RelativeDocumentMoniker": "apitextil\\Utils\\DatabaseConnectionTester.cs",
@@ -950,7 +999,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 56,
               "Title": "UpdateCategoriaDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Categorias\\UpdateCategoriaDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Categorias\\UpdateCategoriaDto.cs",
@@ -962,7 +1011,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 58,
               "Title": "CategoriaService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Categorias\\CategoriaService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\Categorias\\CategoriaService.cs",
@@ -974,7 +1023,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 59,
               "Title": "ICategoriaService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Services\\Categorias\\ICategoriaService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\Categorias\\ICategoriaService.cs",
@@ -986,7 +1035,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 60,
               "Title": "CategoriaDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Categorias\\CategoriaDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Categorias\\CategoriaDto.cs",
@@ -998,7 +1047,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 61,
               "Title": "tblCarrito.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Models\\Entities\\Carrito\\tblCarrito.cs",
               "RelativeDocumentMoniker": "apitextil\\Models\\Entities\\Carrito\\tblCarrito.cs",
@@ -1010,7 +1059,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 62,
               "Title": "tblCarritoItem.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Models\\Entities\\Carrito\\tblCarritoItem.cs",
               "RelativeDocumentMoniker": "apitextil\\Models\\Entities\\Carrito\\tblCarritoItem.cs",
@@ -1022,7 +1071,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 63,
               "Title": "tblCategoria.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Models\\Entities\\Producto\\tblCategoria.cs",
               "RelativeDocumentMoniker": "apitextil\\Models\\Entities\\Producto\\tblCategoria.cs",
@@ -1034,7 +1083,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 64,
               "Title": "tblProducto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Models\\Entities\\Producto\\tblProducto.cs",
               "RelativeDocumentMoniker": "apitextil\\Models\\Entities\\Producto\\tblProducto.cs",
@@ -1046,19 +1095,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "tblEstadoOrden.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Models\\Entities\\Usuario\\tblEstadoOrden.cs",
-              "RelativeDocumentMoniker": "apitextil\\Models\\Entities\\Usuario\\tblEstadoOrden.cs",
-              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Models\\Entities\\Usuario\\tblEstadoOrden.cs",
-              "RelativeToolTip": "apitextil\\Models\\Entities\\Usuario\\tblEstadoOrden.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T08:36:35.624Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "CarritoActualDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Carrito\\CarritoActualDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Carrito\\CarritoActualDto.cs",
@@ -1070,19 +1107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "tblUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Models\\Entities\\Usuario\\tblUsuario.cs",
-              "RelativeDocumentMoniker": "apitextil\\Models\\Entities\\Usuario\\tblUsuario.cs",
-              "ToolTip": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\Models\\Entities\\Usuario\\tblUsuario.cs",
-              "RelativeToolTip": "apitextil\\Models\\Entities\\Usuario\\tblUsuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T07:58:25.307Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "UpdateCarritoItemDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Carrito\\UpdateCarritoItemDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Carrito\\UpdateCarritoItemDto.cs",
@@ -1094,7 +1119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 67,
               "Title": "AddCarritoItemDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\DTOs\\Carrito\\AddCarritoItemDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Carrito\\AddCarritoItemDto.cs",
@@ -1106,7 +1131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 68,
               "Title": "apitextil.csproj",
               "DocumentMoniker": "C:\\Users\\USER\\Videos\\HARUMI\\harumi_otaku_BACKEND_NET\\apitextil\\apitextil.csproj",
               "RelativeDocumentMoniker": "apitextil\\apitextil.csproj",
@@ -1115,10 +1140,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-01-24T07:50:21.695Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }

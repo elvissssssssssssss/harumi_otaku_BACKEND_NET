@@ -11,18 +11,21 @@ namespace Apitextil.Services.Auth;
 
 public class AuthService : IAuthService
 {
-    private readonly EcommerceContext _db;
+    // Usaremos un solo nombre para la base de datos: _context
+    private readonly EcommerceContext _context;
     private readonly IConfiguration _configuration;
 
-    public AuthService(EcommerceContext db, IConfiguration configuration)
+    // ✅ UN SOLO CONSTRUCTOR: Recibe ambas dependencias
+    public AuthService(EcommerceContext context, IConfiguration configuration)
     {
-        _db = db;
+        _context = context;
         _configuration = configuration;
     }
 
     public async Task<long> RegisterAsync(AuthRegisterDto dto)
     {
-        var exists = await _db.tblusuarios.AnyAsync(x => x.Email == dto.Email);
+        // Cambiado _db por _context
+        var exists = await _context.tblusuarios.AnyAsync(x => x.Email == dto.Email);
         if (exists) throw new InvalidOperationException("Email ya registrado.");
 
         var user = new tblUsuario
@@ -36,14 +39,14 @@ public class AuthService : IAuthService
             UpdatedAt = DateTime.UtcNow
         };
 
-        _db.tblusuarios.Add(user);
-        await _db.SaveChangesAsync();
+        _context.tblusuarios.Add(user);
+        await _context.SaveChangesAsync();
         return user.Id;
     }
 
     public async Task<AuthResponseDto?> LoginAsync(AuthLoginDto dto)
     {
-        var user = await _db.tblusuarios.FirstOrDefaultAsync(x => x.Email == dto.Email);
+        var user = await _context.tblusuarios.FirstOrDefaultAsync(x => x.Email == dto.Email);
         if (user == null) return null;
 
         var ok = BCrypt.Net.BCrypt.Verify(dto.Password, user.PasswordHash);
@@ -61,18 +64,27 @@ public class AuthService : IAuthService
         };
     }
 
-    // ✅ ACTUALIZADO: Usa JwtSettings de tu appsettings.json
+    public async Task<IEnumerable<UserResponseDto>> GetAllUsersAsync()
+    {
+        // ✅ Ahora _context funcionará perfectamente aquí
+        return await _context.tblusuarios
+            .Select(u => new UserResponseDto
+            {
+                Id = u.Id,
+                Email = u.Email,
+                Nombre = u.Nombre,
+                Apellido = u.Apellido,
+                Rol = u.Rol,
+                CreatedAt = u.CreatedAt
+            })
+            .ToListAsync();
+    }
+
     private string GenerateJwtToken(tblUsuario user)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
-
-        // ✅ Lee desde JwtSettings (como lo tienes en appsettings.json)
         var secretKey = _configuration["JwtSettings:SecretKey"]
-            ?? throw new InvalidOperationException("JwtSettings:SecretKey no está configurado");
-
-        var issuer = _configuration["JwtSettings:Issuer"];
-        var audience = _configuration["JwtSettings:Audience"];
-        var expiryHours = int.Parse(_configuration["JwtSettings:ExpiryInHours"] ?? "24");
+            ?? throw new InvalidOperationException("SecretKey no configurada");
 
         var key = Encoding.ASCII.GetBytes(secretKey);
 
@@ -85,9 +97,9 @@ public class AuthService : IAuthService
                 new Claim(ClaimTypes.Name, user.Nombre),
                 new Claim(ClaimTypes.Role, user.Rol)
             }),
-            Expires = DateTime.UtcNow.AddHours(expiryHours), // ✅ Usa tu ExpiryInHours
-            Issuer = issuer,
-            Audience = audience,
+            Expires = DateTime.UtcNow.AddHours(24),
+            Issuer = _configuration["JwtSettings:Issuer"],
+            Audience = _configuration["JwtSettings:Audience"],
             SigningCredentials = new SigningCredentials(
                 new SymmetricSecurityKey(key),
                 SecurityAlgorithms.HmacSha256Signature

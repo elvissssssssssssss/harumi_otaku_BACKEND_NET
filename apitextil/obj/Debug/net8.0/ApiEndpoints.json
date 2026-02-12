@@ -53,6 +53,16 @@
   },
   {
     "ContainingType": "Apitextil.Controllers.AuthController",
+    "Method": "GetUsers",
+    "RelativePath": "api/auth/list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Apitextil.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/auth/login",
     "HttpMethod": "POST",
